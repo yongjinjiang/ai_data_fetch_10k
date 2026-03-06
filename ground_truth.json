@@ -1,0 +1,63 @@
+{
+  "_note": "All values in millions USD. Verified against actual downloaded 10-K filing HTML.",
+  "AAPL": {
+    "fiscal_year": "FY2025 (ending Sept 2025)",
+    "total_revenue": 416161,
+    "net_income": 112010,
+    "total_assets": 359241
+  },
+  "MSFT": {
+    "fiscal_year": "FY2025 (ending June 2025)",
+    "total_revenue": 281724,
+    "net_income": 101832,
+    "total_assets": 619003
+  },
+  "AMZN": {
+    "fiscal_year": "FY2025 (ending Dec 2025)",
+    "total_revenue": 574785,
+    "net_income": 30425,
+    "total_assets": 624894
+  },
+  "TSLA": {
+    "fiscal_year": "FY2025 (ending Dec 2025)",
+    "total_revenue": 94827,
+    "net_income": 3855,
+    "total_assets": 137806
+  },
+  "JNJ": {
+    "fiscal_year": "FY2025 (ending Dec 2025)",
+    "total_revenue": 94193,
+    "net_income": 26804,
+    "total_assets": 199210
+  },
+  "JPM": {
+    "fiscal_year": "FY2025 (ending Dec 2025)",
+    "total_revenue": 182447,
+    "net_income": 57048,
+    "total_assets": 4424900
+  },
+  "XOM": {
+    "fiscal_year": "FY2025 (ending Dec 2025)",
+    "total_revenue": 332238,
+    "net_income": 28844,
+    "total_assets": 448980
+  },
+  "PG": {
+    "fiscal_year": "FY2025 (ending June 2025)",
+    "total_revenue": 84284,
+    "net_income": 16065,
+    "total_assets": 125231
+  },
+  "NVDA": {
+    "fiscal_year": "FY2026 (ending Jan 2026)",
+    "total_revenue": 215938,
+    "net_income": 120067,
+    "total_assets": 206803
+  },
+  "META": {
+    "fiscal_year": "FY2025 (ending Dec 2025)",
+    "total_revenue": 200966,
+    "net_income": 60458,
+    "total_assets": 366021
+  }
+}

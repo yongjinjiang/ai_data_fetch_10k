@@ -1,0 +1,52 @@
+{
+  "AAPL": {
+    "total_revenue": 416161.0,
+    "net_income": 112010.0,
+    "total_assets": 359241.0
+  },
+  "MSFT": {
+    "total_revenue": 281724.0,
+    "net_income": 101832.0,
+    "total_assets": 619003.0
+  },
+  "AMZN": {
+    "total_revenue": 637959.0,
+    "net_income": 30425.0,
+    "total_assets": 624894.0
+  },
+  "TSLA": {
+    "total_revenue": 69526.0,
+    "net_income": 3855.0,
+    "total_assets": 137806.0
+  },
+  "JNJ": {
+    "total_revenue": null,
+    "net_income": 26804.0,
+    "total_assets": 199210.0
+  },
+  "JPM": {
+    "total_revenue": 218.0,
+    "net_income": 57048.0,
+    "total_assets": 4424900.0
+  },
+  "XOM": {
+    "total_revenue": 323905.0,
+    "net_income": 28844.0,
+    "total_assets": 448980.0
+  },
+  "PG": {
+    "total_revenue": 84284.0,
+    "net_income": 16065.0,
+    "total_assets": 125231.0
+  },
+  "NVDA": {
+    "total_revenue": 215938.0,
+    "net_income": 120067.0,
+    "total_assets": 206803.0
+  },
+  "META": {
+    "total_revenue": 198759.0,
+    "net_income": 60458.0,
+    "total_assets": 366021.0
+  }
+}

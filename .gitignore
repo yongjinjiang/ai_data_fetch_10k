@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local virtual environment
+venv/
+
+# macOS metadata
+.DS_Store
+
+# Archived legacy artifacts
+archive_legacy/
