@@ -6,6 +6,7 @@ Uses BeautifulSoup + regex to find values in financial statement tables.
 import re
 import os
 from bs4 import BeautifulSoup
+from bs4 import FeatureNotFound
 from config import DATA_DIR, COMPANIES
 
 # Keywords to match for each field (intentionally limited in v1 for <100% accuracy)
@@ -78,7 +79,11 @@ def extract_filing(filepath: str) -> dict:
     with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
         html = f.read()
 
-    soup = BeautifulSoup(html, "lxml")
+    # Prefer lxml when available, but keep extraction running with stdlib parser.
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except FeatureNotFound:
+        soup = BeautifulSoup(html, "html.parser")
     results = {}
     for field in FIELD_KEYWORDS:
         results[field] = extract_from_tables(soup, field)

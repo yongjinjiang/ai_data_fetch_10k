@@ -10,6 +10,7 @@ import re
 from typing import Any
 
 from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+from bs4 import FeatureNotFound
 import warnings
 
 from config import COMPANIES, DATA_DIR
@@ -72,7 +73,11 @@ def _row_label(cells: list[Any]) -> str:
 
 def find_candidates_in_html(html: str, max_candidates_per_field: int = 8) -> dict[str, list[dict[str, Any]]]:
     """Find candidate rows by field from all tables in filing HTML."""
-    soup = BeautifulSoup(html, "lxml")
+    # Prefer lxml when available, but keep extraction running with stdlib parser.
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except FeatureNotFound:
+        soup = BeautifulSoup(html, "html.parser")
     out: dict[str, list[dict[str, Any]]] = {k: [] for k in FIELD_PATTERNS}
 
     for table_idx, table in enumerate(soup.find_all("table")):

@@ -15,6 +15,7 @@ import re
 import os
 import warnings
 from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+from bs4 import FeatureNotFound
 from config import DATA_DIR, COMPANIES
 
 warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
@@ -126,7 +127,11 @@ def extract_filing_v2(filepath: str) -> dict:
     with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
         html = f.read()
 
-    soup = BeautifulSoup(html, "lxml")
+    # Prefer lxml when available, but keep extraction running with stdlib parser.
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except FeatureNotFound:
+        soup = BeautifulSoup(html, "html.parser")
     results = {}
     for field in FIELD_KEYWORDS_V2:
         results[field] = extract_from_tables_v2(soup, field)
