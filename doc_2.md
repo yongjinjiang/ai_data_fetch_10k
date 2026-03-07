@@ -128,6 +128,31 @@ New_folder_10k/
 
 ---
 
+## Hybrid Extractor (Rule + LLM + Fallback)
+
+A new hybrid path is available for robustness on future filing format drift:
+
+- `extractor_hybrid.py`: orchestration layer
+- `candidate_finder.py`: table-row candidate collection by field
+- `llm_resolver.py`: optional LLM resolver (only if `OPENAI_API_KEY` is set)
+- `validator.py`: confidence-based arbitration + sanity/fallback logic
+
+### Run Hybrid
+
+```bash
+python main.py --skip-download --version hybrid
+```
+
+### Environment Variables
+
+- `OPENAI_API_KEY` (optional): if missing, hybrid degrades gracefully to rule output
+- `OPENAI_MODEL` (optional): defaults to `gpt-4o-mini`
+
+### Hybrid Outputs
+
+- `results/extracted_hybrid.json`: final values used for evaluation
+- `results/extracted_hybrid_debug.json`: per-ticker debug payload (rule values, LLM outputs, decisions, candidates)
+
 ## Suggested Next Git Commit Message
 
 ```

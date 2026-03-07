@@ -1,6 +1,6 @@
 """
 Main orchestrator for 10K Report Data Extraction & Evaluation.
-Usage: python main.py [--skip-download] [--version v1|v2]
+Usage: python main.py [--skip-download] [--version v1|v2|hybrid]
 """
 
 import argparse
@@ -11,6 +11,7 @@ from config import RESULTS_DIR
 from downloader import download_all
 from extractor import extract_all
 from extractor_v2 import extract_all_v2
+from extractor_hybrid import extract_all_hybrid
 from evaluate import load_ground_truth, evaluate, print_report
 
 
@@ -19,7 +20,7 @@ def main():
     parser.add_argument("--skip-download", action="store_true",
                         help="Skip downloading filings (use cached files)")
     parser.add_argument("--version", default="v1",
-                        help="Version label for this run (default: v1)")
+                        help="Version label for this run (v1|v2|hybrid, default: v1)")
     args = parser.parse_args()
 
     # Step 1: Download
@@ -35,8 +36,11 @@ def main():
     print("\n" + "=" * 60)
     print(f"  STEP 2: Extracting data ({args.version})")
     print("=" * 60)
+    hybrid_debug = None
     if args.version == "v2":
         extracted = extract_all_v2()
+    elif args.version == "hybrid":
+        extracted, hybrid_debug = extract_all_hybrid()
     else:
         extracted = extract_all()
 
@@ -46,6 +50,12 @@ def main():
     with open(ext_path, "w") as f:
         json.dump(extracted, f, indent=2)
     print(f"\nExtracted data saved to {ext_path}")
+
+    if args.version == "hybrid" and hybrid_debug is not None:
+        debug_path = os.path.join(RESULTS_DIR, "extracted_hybrid_debug.json")
+        with open(debug_path, "w") as f:
+            json.dump(hybrid_debug, f, indent=2)
+        print(f"Hybrid debug data saved to {debug_path}")
 
     # Step 3: Evaluate
     print("\n" + "=" * 60)
