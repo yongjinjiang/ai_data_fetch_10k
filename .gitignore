@@ -10,3 +10,7 @@ venv/
 
 # Archived legacy artifacts
 archive_legacy/
+
+# Secrets
+.env
+.env.*
