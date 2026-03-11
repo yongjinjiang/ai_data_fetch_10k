@@ -10,8 +10,8 @@
     "total_assets": 619003.0
   },
   "AMZN": {
-    "total_revenue": 574785.0,
-    "net_income": 30425.0,
+    "total_revenue": 637959.0,
+    "net_income": 77670.0,
     "total_assets": 624894.0
   },
   "TSLA": {
@@ -21,17 +21,17 @@
   },
   "JNJ": {
     "total_revenue": 94193.0,
-    "net_income": 26804.0,
+    "net_income": 35153.0,
     "total_assets": 199210.0
   },
   "JPM": {
-    "total_revenue": 182447.0,
+    "total_revenue": 185581.0,
     "net_income": 57048.0,
-    "total_assets": 4424900.0
+    "total_assets": 4431624.0
   },
   "XOM": {
-    "total_revenue": 332238.0,
-    "net_income": 28844.0,
+    "total_revenue": 478091.0,
+    "net_income": 36010.0,
     "total_assets": 448980.0
   },
   "PG": {
@@ -46,7 +46,7 @@
   },
   "META": {
     "total_revenue": 200966.0,
-    "net_income": 60458.0,
+    "net_income": 62360.0,
     "total_assets": 366021.0
   }
 }

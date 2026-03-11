@@ -1,0 +1,1620 @@
+{
+  "AAPL": {
+    "rule": {
+      "total_revenue": 416161.0,
+      "net_income": 112010.0,
+      "total_assets": 359241.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 416161.0,
+        "confidence": 1.0,
+        "source_label": "Total net sales",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 112010.0,
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 359241.0,
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 416161.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 112010.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 359241.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Total net sales",
+          "value": 416161.0,
+          "table_index": 14,
+          "row_index": 7
+        },
+        {
+          "label": "Total net sales",
+          "value": 416161.0,
+          "table_index": 15,
+          "row_index": 7
+        },
+        {
+          "label": "Total net sales",
+          "value": 416161.0,
+          "table_index": 22,
+          "row_index": 6
+        },
+        {
+          "label": "Total net sales",
+          "value": 416161.0,
+          "table_index": 27,
+          "row_index": 7
+        },
+        {
+          "label": "Total net sales",
+          "value": 416161.0,
+          "table_index": 51,
+          "row_index": 6
+        },
+        {
+          "label": "Net sales",
+          "value": 178353.0,
+          "table_index": 48,
+          "row_index": 3
+        },
+        {
+          "label": "Net sales",
+          "value": 167045.0,
+          "table_index": 49,
+          "row_index": 3
+        },
+        {
+          "label": "Net sales",
+          "value": 162560.0,
+          "table_index": 50,
+          "row_index": 3
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Net income",
+          "value": 112010.0,
+          "table_index": 22,
+          "row_index": 23
+        },
+        {
+          "label": "Net income",
+          "value": 112010.0,
+          "table_index": 23,
+          "row_index": 3
+        },
+        {
+          "label": "Net income",
+          "value": 112010.0,
+          "table_index": 25,
+          "row_index": 14
+        },
+        {
+          "label": "Net income",
+          "value": 112010.0,
+          "table_index": 26,
+          "row_index": 6
+        },
+        {
+          "label": "Net income",
+          "value": 112010.0,
+          "table_index": 28,
+          "row_index": 3
+        },
+        {
+          "label": "Adjustment for net (gains)/losses realized and included in net income",
+          "value": 414.0,
+          "table_index": 23,
+          "row_index": 14
+        },
+        {
+          "label": "Adjustment for net (gains)/losses realized and included in net income",
+          "value": -212.0,
+          "table_index": 23,
+          "row_index": 9
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 359241.0,
+          "table_index": 24,
+          "row_index": 17
+        }
+      ]
+    }
+  },
+  "MSFT": {
+    "rule": {
+      "total_revenue": 281724.0,
+      "net_income": 101832.0,
+      "total_assets": 619003.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 281724.0,
+        "confidence": 1.0,
+        "source_label": "Total revenue",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 101832.0,
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 619003.0,
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 281724.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 101832.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 619003.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Revenue",
+          "value": 281724.0,
+          "table_index": 13,
+          "row_index": 4
+        },
+        {
+          "label": "Revenue",
+          "value": 281724.0,
+          "table_index": 14,
+          "row_index": 36
+        },
+        {
+          "label": "Total revenue",
+          "value": 281724.0,
+          "table_index": 23,
+          "row_index": 11
+        },
+        {
+          "label": "Revenue",
+          "value": 281724.0,
+          "table_index": 71,
+          "row_index": 38
+        },
+        {
+          "label": "Revenue",
+          "value": 247442.0,
+          "table_index": 45,
+          "row_index": 6
+        },
+        {
+          "label": "Deferral of revenue",
+          "value": 186957.0,
+          "table_index": 58,
+          "row_index": 7
+        },
+        {
+          "label": "Revenue",
+          "value": 120810.0,
+          "table_index": 14,
+          "row_index": 6
+        },
+        {
+          "label": "Revenue",
+          "value": 120810.0,
+          "table_index": 71,
+          "row_index": 8
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Net income",
+          "value": 101832.0,
+          "table_index": 13,
+          "row_index": 7
+        },
+        {
+          "label": "Net income",
+          "value": 101832.0,
+          "table_index": 23,
+          "row_index": 36
+        },
+        {
+          "label": "Net income",
+          "value": 101832.0,
+          "table_index": 24,
+          "row_index": 6
+        },
+        {
+          "label": "Net income",
+          "value": 101832.0,
+          "table_index": 26,
+          "row_index": 7
+        },
+        {
+          "label": "Net income",
+          "value": 101832.0,
+          "table_index": 27,
+          "row_index": 19
+        },
+        {
+          "label": "Net income available for common shareholders (A)",
+          "value": 101832.0,
+          "table_index": 28,
+          "row_index": 6
+        },
+        {
+          "label": "Net income",
+          "value": 88308.0,
+          "table_index": 45,
+          "row_index": 7
+        },
+        {
+          "label": "Other comprehensive income (loss)",
+          "value": 2243.0,
+          "table_index": 24,
+          "row_index": 15
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 619003.0,
+          "table_index": 25,
+          "row_index": 27
+        }
+      ]
+    }
+  },
+  "AMZN": {
+    "rule": {
+      "total_revenue": 574785.0,
+      "net_income": 30425.0,
+      "total_assets": 624894.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 637959.0,
+        "confidence": 0.9,
+        "source_label": "Net sales",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 77670.0,
+        "confidence": 0.9,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 624894.0,
+        "confidence": 0.9,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 637959.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 77670.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 624894.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Net sales",
+          "value": 637959.0,
+          "table_index": 28,
+          "row_index": 3
+        },
+        {
+          "label": "Total net sales",
+          "value": 574785.0,
+          "table_index": 35,
+          "row_index": 5
+        },
+        {
+          "label": "Net sales",
+          "value": 574785.0,
+          "table_index": 69,
+          "row_index": 19
+        },
+        {
+          "label": "Net sales",
+          "value": 352828.0,
+          "table_index": 69,
+          "row_index": 4
+        },
+        {
+          "label": "Net sales",
+          "value": 131200.0,
+          "table_index": 69,
+          "row_index": 9
+        },
+        {
+          "label": "Net sales",
+          "value": 90757.0,
+          "table_index": 69,
+          "row_index": 14
+        },
+        {
+          "label": "Unearned revenue",
+          "value": 18103.0,
+          "table_index": 37,
+          "row_index": 19
+        },
+        {
+          "label": "Unearned revenue",
+          "value": 4578.0,
+          "table_index": 34,
+          "row_index": 18
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Net income",
+          "value": 77670.0,
+          "table_index": 38,
+          "row_index": 19
+        },
+        {
+          "label": "Net income",
+          "value": 59248.0,
+          "table_index": 38,
+          "row_index": 12
+        },
+        {
+          "label": "Net income",
+          "value": 30425.0,
+          "table_index": 34,
+          "row_index": 5
+        },
+        {
+          "label": "Net income",
+          "value": 30425.0,
+          "table_index": 35,
+          "row_index": 22
+        },
+        {
+          "label": "Net income",
+          "value": 30425.0,
+          "table_index": 36,
+          "row_index": 3
+        },
+        {
+          "label": "Net income",
+          "value": 30425.0,
+          "table_index": 38,
+          "row_index": 5
+        },
+        {
+          "label": "Net income",
+          "value": 30425.0,
+          "table_index": 69,
+          "row_index": 25
+        },
+        {
+          "label": "Other comprehensive income (loss)",
+          "value": 28264.0,
+          "table_index": 38,
+          "row_index": 20
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 624894.0,
+          "table_index": 37,
+          "row_index": 14
+        }
+      ]
+    }
+  },
+  "TSLA": {
+    "rule": {
+      "total_revenue": 94827.0,
+      "net_income": 3855.0,
+      "total_assets": 137806.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 94827.0,
+        "confidence": 1.0,
+        "source_label": "Total revenues",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 3855.0,
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 137806.0,
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 94827.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 3855.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 137806.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Total revenues",
+          "value": 94827.0,
+          "table_index": 11,
+          "row_index": 10
+        },
+        {
+          "label": "Total revenues",
+          "value": 94827.0,
+          "table_index": 22,
+          "row_index": 10
+        },
+        {
+          "label": "Total revenues",
+          "value": 94827.0,
+          "table_index": 26,
+          "row_index": 10
+        },
+        {
+          "label": "Total revenues from sales and services",
+          "value": 92614.0,
+          "table_index": 26,
+          "row_index": 7
+        },
+        {
+          "label": "Total automotive & services and other segment revenue",
+          "value": 82056.0,
+          "table_index": 11,
+          "row_index": 8
+        },
+        {
+          "label": "Revenues",
+          "value": 82056.0,
+          "table_index": 68,
+          "row_index": 4
+        },
+        {
+          "label": "Total cost of revenues",
+          "value": 77733.0,
+          "table_index": 12,
+          "row_index": 10
+        },
+        {
+          "label": "Total cost of revenues",
+          "value": 77733.0,
+          "table_index": 22,
+          "row_index": 17
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Net income",
+          "value": 3855.0,
+          "table_index": 22,
+          "row_index": 30
+        },
+        {
+          "label": "Net income",
+          "value": 3855.0,
+          "table_index": 23,
+          "row_index": 3
+        },
+        {
+          "label": "Net income",
+          "value": 3855.0,
+          "table_index": 25,
+          "row_index": 4
+        },
+        {
+          "label": "Net income attributable to common stockholders",
+          "value": 3794.0,
+          "table_index": 22,
+          "row_index": 32
+        },
+        {
+          "label": "Net income attributable to common stockholders",
+          "value": 3794.0,
+          "table_index": 28,
+          "row_index": 3
+        },
+        {
+          "label": "Net income used in computing basic and diluted net income per share of common stock",
+          "value": 3794.0,
+          "table_index": 28,
+          "row_index": 5
+        },
+        {
+          "label": "Weighted average shares used in computing net income per share of common stock, diluted",
+          "value": 3528.0,
+          "table_index": 29,
+          "row_index": 8
+        },
+        {
+          "label": "Weighted average shares used in computing net income per share of common stock, basic",
+          "value": 3225.0,
+          "table_index": 29,
+          "row_index": 3
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 137806.0,
+          "table_index": 21,
+          "row_index": 19
+        },
+        {
+          "label": "Total assets",
+          "value": 3134.0,
+          "table_index": 67,
+          "row_index": 11
+        }
+      ]
+    }
+  },
+  "JNJ": {
+    "rule": {
+      "total_revenue": 94193.0,
+      "net_income": 26804.0,
+      "total_assets": 199210.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 94193.0,
+        "confidence": 1.0,
+        "source_label": "Sales to customers",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 35153.0,
+        "confidence": 1.0,
+        "source_label": "Net earnings",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 199210.0,
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 94193.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 35153.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 199210.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Sales to customers",
+          "value": 94193.0,
+          "table_index": 75,
+          "row_index": 2
+        },
+        {
+          "label": "Sales to customers",
+          "value": 60401.0,
+          "table_index": 179,
+          "row_index": 4
+        },
+        {
+          "label": "Sales to customers",
+          "value": 10036.0,
+          "table_index": 204,
+          "row_index": 3
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Net earnings",
+          "value": 35153.0,
+          "table_index": 79,
+          "row_index": 4
+        },
+        {
+          "label": "Net earnings from continuing operations",
+          "value": 26804.0,
+          "table_index": 75,
+          "row_index": 14
+        },
+        {
+          "label": "Net earnings",
+          "value": 26804.0,
+          "table_index": 75,
+          "row_index": 16
+        },
+        {
+          "label": "Net earnings",
+          "value": 26804.0,
+          "table_index": 77,
+          "row_index": 2
+        },
+        {
+          "label": "Net earnings",
+          "value": 26804.0,
+          "table_index": 79,
+          "row_index": 22
+        },
+        {
+          "label": "Net earnings",
+          "value": 26804.0,
+          "table_index": 81,
+          "row_index": 3
+        },
+        {
+          "label": "Net earnings from discontinued operations, net of tax (Note 21)",
+          "value": 21827.0,
+          "table_index": 75,
+          "row_index": 15
+        },
+        {
+          "label": "Net earnings from Discontinued Operations",
+          "value": 21827.0,
+          "table_index": 204,
+          "row_index": 14
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 199210.0,
+          "table_index": 73,
+          "row_index": 18
+        },
+        {
+          "label": "Total assets acquired",
+          "value": 17.5,
+          "table_index": 187,
+          "row_index": 9
+        },
+        {
+          "label": "Total assets acquired and liabilities assumed",
+          "value": 14.5,
+          "table_index": 187,
+          "row_index": 16
+        }
+      ]
+    }
+  },
+  "JPM": {
+    "rule": {
+      "total_revenue": 182447.0,
+      "net_income": 57048.0,
+      "total_assets": 4424900.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 185581.0,
+        "confidence": 0.9,
+        "source_label": "Total net revenue - managed basis",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 57048.0,
+        "confidence": 0.9,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 4431624.0,
+        "confidence": 0.9,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 185581.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 57048.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 4431624.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Total net revenue - managed basis",
+          "value": 185581.0,
+          "table_index": 72,
+          "row_index": 26
+        },
+        {
+          "label": "Total net revenue",
+          "value": 182447.0,
+          "table_index": 64,
+          "row_index": 4
+        },
+        {
+          "label": "Total net revenue",
+          "value": 182447.0,
+          "table_index": 72,
+          "row_index": 7
+        },
+        {
+          "label": "Total net revenue",
+          "value": 182447.0,
+          "table_index": 80,
+          "row_index": 16
+        },
+        {
+          "label": "Total net revenue",
+          "value": 182447.0,
+          "table_index": 97,
+          "row_index": 6
+        },
+        {
+          "label": "Total net revenue",
+          "value": 182447.0,
+          "table_index": 328,
+          "row_index": 16
+        },
+        {
+          "label": "Noninterest revenue \u2013 managed basis",
+          "value": 89713.0,
+          "table_index": 100,
+          "row_index": 3
+        },
+        {
+          "label": "Noninterest revenue",
+          "value": 87004.0,
+          "table_index": 72,
+          "row_index": 5
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Less: Net income of subsidiaries and affiliates",
+          "value": 71163.0,
+          "table_index": 650,
+          "row_index": 5
+        },
+        {
+          "label": "Net income",
+          "value": 57048.0,
+          "table_index": 64,
+          "row_index": 10
+        },
+        {
+          "label": "Net income",
+          "value": 57048.0,
+          "table_index": 72,
+          "row_index": 11
+        },
+        {
+          "label": "Net income",
+          "value": 57048.0,
+          "table_index": 97,
+          "row_index": 12
+        },
+        {
+          "label": "Net income",
+          "value": 57048.0,
+          "table_index": 328,
+          "row_index": 30
+        },
+        {
+          "label": "Net income",
+          "value": 57048.0,
+          "table_index": 330,
+          "row_index": 2
+        },
+        {
+          "label": "Net income",
+          "value": 57048.0,
+          "table_index": 335,
+          "row_index": 17
+        },
+        {
+          "label": "Net income",
+          "value": 57048.0,
+          "table_index": 337,
+          "row_index": 3
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 4431624.0,
+          "table_index": 658,
+          "row_index": 21
+        },
+        {
+          "label": "Total assets",
+          "value": 4424900.0,
+          "table_index": 64,
+          "row_index": 39
+        },
+        {
+          "label": "Total assets",
+          "value": 4424900.0,
+          "table_index": 89,
+          "row_index": 19
+        },
+        {
+          "label": "Total assets (a)",
+          "value": 4424900.0,
+          "table_index": 332,
+          "row_index": 18
+        },
+        {
+          "label": "Total assets",
+          "value": 2195248.0,
+          "table_index": 130,
+          "row_index": 18
+        },
+        {
+          "label": "Total assets",
+          "value": 2142534.0,
+          "table_index": 130,
+          "row_index": 4
+        },
+        {
+          "label": "Total assets measured at fair value",
+          "value": 1831870.0,
+          "table_index": 312,
+          "row_index": 14
+        },
+        {
+          "label": "Total assets measured at fair value on a recurring basis",
+          "value": 1829852.0,
+          "table_index": 312,
+          "row_index": 12
+        }
+      ]
+    }
+  },
+  "XOM": {
+    "rule": {
+      "total_revenue": 332238.0,
+      "net_income": 28844.0,
+      "total_assets": 448980.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 478091.0,
+        "confidence": 0.9,
+        "source_label": "Segment revenues and other income",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 36010.0,
+        "confidence": 0.9,
+        "source_label": "Net income (loss) attributable to ExxonMobil",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 448980.0,
+        "confidence": 0.9,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 478091.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 36010.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 448980.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Segment revenues and other income",
+          "value": 478091.0,
+          "table_index": 192,
+          "row_index": 26
+        },
+        {
+          "label": "Segment revenues and other income",
+          "value": 469369.0,
+          "table_index": 194,
+          "row_index": 26
+        },
+        {
+          "label": "Segment revenues and other income",
+          "value": 452209.0,
+          "table_index": 190,
+          "row_index": 26
+        },
+        {
+          "label": "Total consolidated revenues and other income",
+          "value": 349585.0,
+          "table_index": 192,
+          "row_index": 29
+        },
+        {
+          "label": "Sales and other operating revenues",
+          "value": 347406.0,
+          "table_index": 276,
+          "row_index": 3
+        },
+        {
+          "label": "Total consolidated revenues and other income",
+          "value": 344582.0,
+          "table_index": 194,
+          "row_index": 29
+        },
+        {
+          "label": "Total revenues and other income",
+          "value": 332238.0,
+          "table_index": 173,
+          "row_index": 7
+        },
+        {
+          "label": "Total consolidated revenues and other income",
+          "value": 332238.0,
+          "table_index": 190,
+          "row_index": 29
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Total income (loss) before taxes",
+          "value": 52070.0,
+          "table_index": 254,
+          "row_index": 19
+        },
+        {
+          "label": "Total income (loss) before taxes",
+          "value": 43314.0,
+          "table_index": 252,
+          "row_index": 22
+        },
+        {
+          "label": "Income (loss) before income taxes",
+          "value": 41268.0,
+          "table_index": 173,
+          "row_index": 19
+        },
+        {
+          "label": "Total segment income (loss)",
+          "value": 37801.0,
+          "table_index": 194,
+          "row_index": 32
+        },
+        {
+          "label": "Net income (loss) for the year",
+          "value": 36010.0,
+          "table_index": 181,
+          "row_index": 8
+        },
+        {
+          "label": "Net income (loss) attributable to ExxonMobil",
+          "value": 36010.0,
+          "table_index": 194,
+          "row_index": 34
+        },
+        {
+          "label": "Net income (loss) including noncontrolling interests",
+          "value": 35063.0,
+          "table_index": 254,
+          "row_index": 18
+        },
+        {
+          "label": "Total segment income (loss)",
+          "value": 35052.0,
+          "table_index": 192,
+          "row_index": 32
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 448980.0,
+          "table_index": 84,
+          "row_index": 15
+        },
+        {
+          "label": "Total assets",
+          "value": 448980.0,
+          "table_index": 87,
+          "row_index": 3
+        },
+        {
+          "label": "Total Assets",
+          "value": 448980.0,
+          "table_index": 177,
+          "row_index": 16
+        },
+        {
+          "label": "Total assets",
+          "value": 413825.0,
+          "table_index": 190,
+          "row_index": 46
+        },
+        {
+          "label": "Total assets",
+          "value": 411124.0,
+          "table_index": 192,
+          "row_index": 46
+        },
+        {
+          "label": "Total assets",
+          "value": 185386.0,
+          "table_index": 229,
+          "row_index": 11
+        },
+        {
+          "label": "Total assets",
+          "value": 154914.0,
+          "table_index": 192,
+          "row_index": 41
+        },
+        {
+          "label": "Total assets",
+          "value": 153042.0,
+          "table_index": 190,
+          "row_index": 41
+        }
+      ]
+    }
+  },
+  "PG": {
+    "rule": {
+      "total_revenue": 84284.0,
+      "net_income": 16065.0,
+      "total_assets": 125231.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 84284.0,
+        "confidence": 1.0,
+        "source_label": "Net sales",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 16065.0,
+        "confidence": 1.0,
+        "source_label": "Net earnings",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 125231.0,
+        "confidence": 1.0,
+        "source_label": "TOTAL ASSETS",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 84284.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 16065.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 125231.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Net sales",
+          "value": 84284.0,
+          "table_index": 10,
+          "row_index": 2
+        },
+        {
+          "label": "NET SALES",
+          "value": 84284.0,
+          "table_index": 30,
+          "row_index": 2
+        },
+        {
+          "label": "Net sales",
+          "value": 29617.0,
+          "table_index": 16,
+          "row_index": 3
+        },
+        {
+          "label": "Net sales",
+          "value": 20248.0,
+          "table_index": 17,
+          "row_index": 3
+        },
+        {
+          "label": "Net sales",
+          "value": 15220.0,
+          "table_index": 38,
+          "row_index": 3
+        },
+        {
+          "label": "Net sales",
+          "value": 15008.0,
+          "table_index": 39,
+          "row_index": 3
+        },
+        {
+          "label": "Net sales",
+          "value": 14964.0,
+          "table_index": 13,
+          "row_index": 3
+        },
+        {
+          "label": "Net sales",
+          "value": 14964.0,
+          "table_index": 37,
+          "row_index": 3
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Net earnings",
+          "value": 16065.0,
+          "table_index": 10,
+          "row_index": 4
+        },
+        {
+          "label": "NET EARNINGS",
+          "value": 16065.0,
+          "table_index": 30,
+          "row_index": 14
+        },
+        {
+          "label": "NET EARNINGS",
+          "value": 16065.0,
+          "table_index": 31,
+          "row_index": 2
+        },
+        {
+          "label": "Net earnings",
+          "value": 16065.0,
+          "table_index": 34,
+          "row_index": 4
+        },
+        {
+          "label": "Net earnings attributable to Procter & Gamble",
+          "value": 15974.0,
+          "table_index": 10,
+          "row_index": 5
+        },
+        {
+          "label": "Net earnings attributable to P&G",
+          "value": 15974.0,
+          "table_index": 25,
+          "row_index": 9
+        },
+        {
+          "label": "NET EARNINGS ATTRIBUTABLE TO PROCTER & GAMBLE",
+          "value": 15974.0,
+          "table_index": 30,
+          "row_index": 16
+        },
+        {
+          "label": "Net earnings",
+          "value": 15974.0,
+          "table_index": 33,
+          "row_index": 26
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "TOTAL ASSETS",
+          "value": 125231.0,
+          "table_index": 32,
+          "row_index": 17
+        },
+        {
+          "label": "TOTAL ASSETS AT FAIR VALUE",
+          "value": 11672.0,
+          "table_index": 67,
+          "row_index": 11
+        },
+        {
+          "label": "TOTAL ASSETS IN THE FAIR VALUE HIERARCHY",
+          "value": 1312.0,
+          "table_index": 67,
+          "row_index": 9
+        }
+      ]
+    }
+  },
+  "NVDA": {
+    "rule": {
+      "total_revenue": 215938.0,
+      "net_income": 120067.0,
+      "total_assets": 206803.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 215938.0,
+        "confidence": 1.0,
+        "source_label": "Total revenue",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 120067.0,
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 206803.0,
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 215938.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 120067.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 206803.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Revenue",
+          "value": 215938.0,
+          "table_index": 9,
+          "row_index": 5
+        },
+        {
+          "label": "Revenue",
+          "value": 215938.0,
+          "table_index": 20,
+          "row_index": 3
+        },
+        {
+          "label": "Total revenue",
+          "value": 215938.0,
+          "table_index": 54,
+          "row_index": 10
+        },
+        {
+          "label": "Total revenue",
+          "value": 215938.0,
+          "table_index": 55,
+          "row_index": 12
+        },
+        {
+          "label": "Revenue",
+          "value": 193479.0,
+          "table_index": 52,
+          "row_index": 5
+        },
+        {
+          "label": "Revenue",
+          "value": 116193.0,
+          "table_index": 52,
+          "row_index": 10
+        },
+        {
+          "label": "Cost of revenue",
+          "value": 62475.0,
+          "table_index": 20,
+          "row_index": 4
+        },
+        {
+          "label": "Revenue",
+          "value": 47405.0,
+          "table_index": 52,
+          "row_index": 15
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Net income",
+          "value": 120067.0,
+          "table_index": 9,
+          "row_index": 9
+        },
+        {
+          "label": "Net income",
+          "value": 120067.0,
+          "table_index": 20,
+          "row_index": 17
+        },
+        {
+          "label": "Net income",
+          "value": 120067.0,
+          "table_index": 21,
+          "row_index": 3
+        },
+        {
+          "label": "Net income",
+          "value": 120067.0,
+          "table_index": 23,
+          "row_index": 21
+        },
+        {
+          "label": "Net income",
+          "value": 120067.0,
+          "table_index": 24,
+          "row_index": 4
+        },
+        {
+          "label": "Net income",
+          "value": 120067.0,
+          "table_index": 29,
+          "row_index": 6
+        },
+        {
+          "label": "Net income",
+          "value": 72880.0,
+          "table_index": 23,
+          "row_index": 13
+        },
+        {
+          "label": "Net income",
+          "value": 29760.0,
+          "table_index": 23,
+          "row_index": 5
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 206803.0,
+          "table_index": 22,
+          "row_index": 17
+        }
+      ]
+    }
+  },
+  "META": {
+    "rule": {
+      "total_revenue": 200966.0,
+      "net_income": 60458.0,
+      "total_assets": 366021.0
+    },
+    "llm": {
+      "total_revenue": {
+        "value": 200966.0,
+        "confidence": 1.0,
+        "source_label": "Total revenue",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 62360.0,
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 366021.0,
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 200966.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "net_income": {
+        "value": 62360.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      },
+      "total_assets": {
+        "value": 366021.0,
+        "source": "llm",
+        "reason": "high_confidence"
+      }
+    },
+    "candidates": {
+      "total_revenue": [
+        {
+          "label": "Revenue",
+          "value": 200966.0,
+          "table_index": 9,
+          "row_index": 3
+        },
+        {
+          "label": "Total revenue",
+          "value": 200966.0,
+          "table_index": 11,
+          "row_index": 9
+        },
+        {
+          "label": "Revenue",
+          "value": 200966.0,
+          "table_index": 26,
+          "row_index": 3
+        },
+        {
+          "label": "Total revenue",
+          "value": 200966.0,
+          "table_index": 32,
+          "row_index": 7
+        },
+        {
+          "label": "Total revenue",
+          "value": 200966.0,
+          "table_index": 33,
+          "row_index": 7
+        },
+        {
+          "label": "Revenue",
+          "value": 200966.0,
+          "table_index": 64,
+          "row_index": 16
+        },
+        {
+          "label": "Revenue",
+          "value": 198759.0,
+          "table_index": 6,
+          "row_index": 6
+        },
+        {
+          "label": "Revenue",
+          "value": 198759.0,
+          "table_index": 64,
+          "row_index": 4
+        }
+      ],
+      "net_income": [
+        {
+          "label": "Income (loss) from operations",
+          "value": 102469.0,
+          "table_index": 6,
+          "row_index": 8
+        },
+        {
+          "label": "Net income",
+          "value": 62360.0,
+          "table_index": 28,
+          "row_index": 11
+        },
+        {
+          "label": "Net income",
+          "value": 60458.0,
+          "table_index": 9,
+          "row_index": 14
+        },
+        {
+          "label": "Net income",
+          "value": 60458.0,
+          "table_index": 26,
+          "row_index": 14
+        },
+        {
+          "label": "Net income",
+          "value": 60458.0,
+          "table_index": 27,
+          "row_index": 3
+        },
+        {
+          "label": "Net income",
+          "value": 60458.0,
+          "table_index": 28,
+          "row_index": 20
+        },
+        {
+          "label": "Net income",
+          "value": 60458.0,
+          "table_index": 29,
+          "row_index": 4
+        },
+        {
+          "label": "Net income",
+          "value": 60458.0,
+          "table_index": 34,
+          "row_index": 7
+        }
+      ],
+      "total_assets": [
+        {
+          "label": "Total assets",
+          "value": 366021.0,
+          "table_index": 25,
+          "row_index": 15
+        }
+      ]
+    }
+  }
+}

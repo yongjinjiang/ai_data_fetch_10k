@@ -1,0 +1,9 @@
+{
+  "version": "hybrid",
+  "total_fields": 30,
+  "exact_matches": 22,
+  "close_matches": 25,
+  "accuracy_pct": 73.3,
+  "close_accuracy_pct": 83.3,
+  "mape": 4.65
+}
