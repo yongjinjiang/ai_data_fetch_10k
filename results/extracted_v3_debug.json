@@ -1,0 +1,602 @@
+{
+  "AAPL": {
+    "rule": {
+      "total_revenue": 416161.0,
+      "net_income": 112010.0,
+      "total_assets": 359241.0
+    },
+    "chunks_count": 62,
+    "llm": {
+      "total_revenue": {
+        "value": 416161.0,
+        "table_id": 22,
+        "row_label": "Total net sales",
+        "column_label": "September 27, 2025",
+        "unit": "millions USD",
+        "confidence": 0.95,
+        "source_label": "Total net sales",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 112010.0,
+        "table_id": 22,
+        "row_label": "Net income",
+        "column_label": "September 27, 2025",
+        "unit": "millions USD",
+        "confidence": 0.95,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 359241.0,
+        "table_id": 24,
+        "row_label": "Total assets",
+        "column_label": "September 27, 2025",
+        "unit": "millions USD",
+        "confidence": 0.95,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 416161.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 112010.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 359241.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "MSFT": {
+    "rule": {
+      "total_revenue": 281724.0,
+      "net_income": 101832.0,
+      "total_assets": 619003.0
+    },
+    "chunks_count": 83,
+    "llm": {
+      "total_revenue": {
+        "value": 281724.0,
+        "table_id": 23,
+        "row_label": "Total revenue",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total revenue",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 101832.0,
+        "table_id": 23,
+        "row_label": "Net income",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 619003.0,
+        "table_id": 25,
+        "row_label": "Total assets",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 281724.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 101832.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 619003.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "AMZN": {
+    "rule": {
+      "total_revenue": 574785.0,
+      "net_income": 30425.0,
+      "total_assets": 624894.0
+    },
+    "chunks_count": 92,
+    "llm": {
+      "total_revenue": {
+        "value": 716924.0,
+        "table_id": 69,
+        "row_label": "Net sales",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Net sales",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 77670.0,
+        "table_id": 36,
+        "row_label": "Net income",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 818042.0,
+        "table_id": 37,
+        "row_label": "Total assets",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 716924.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 77670.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 818042.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "TSLA": {
+    "rule": {
+      "total_revenue": 94827.0,
+      "net_income": 3855.0,
+      "total_assets": 137806.0
+    },
+    "chunks_count": 79,
+    "llm": {
+      "total_revenue": {
+        "value": 94827.0,
+        "table_id": 22,
+        "row_label": "Total revenues",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total revenues",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 3855.0,
+        "table_id": 23,
+        "row_label": "Net income",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 137806.0,
+        "table_id": 21,
+        "row_label": "Total assets",
+        "column_label": "December 31, 2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 94827.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 3855.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 137806.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "JNJ": {
+    "rule": {
+      "total_revenue": 94193.0,
+      "net_income": 26804.0,
+      "total_assets": 199210.0
+    },
+    "chunks_count": 238,
+    "llm": {
+      "total_revenue": {
+        "value": 94193.0,
+        "table_id": 75,
+        "row_label": "Sales to customers",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Sales to customers",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 26804.0,
+        "table_id": 75,
+        "row_label": "Net earnings",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Net earnings",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 199210.0,
+        "table_id": 73,
+        "row_label": "Total assets",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 94193.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 26804.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 199210.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "JPM": {
+    "rule": {
+      "total_revenue": 182447.0,
+      "net_income": 57048.0,
+      "total_assets": 4424900.0
+    },
+    "chunks_count": 679,
+    "llm": {
+      "total_revenue": {
+        "value": 182447.0,
+        "table_id": 72,
+        "row_label": "Total net revenue",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total net revenue",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 57048.0,
+        "table_id": 72,
+        "row_label": "Net income",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 4424900.0,
+        "table_id": 89,
+        "row_label": "Total assets",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 182447.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 57048.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 4424900.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "XOM": {
+    "rule": {
+      "total_revenue": 332238.0,
+      "net_income": 28844.0,
+      "total_assets": 448980.0
+    },
+    "chunks_count": 311,
+    "llm": {
+      "total_revenue": {
+        "value": 332238.0,
+        "table_id": 173,
+        "row_label": "Total revenues and other income",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 0.95,
+        "source_label": "Total revenues and other income",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 28844.0,
+        "table_id": 190,
+        "row_label": "Net income (loss) attributable to ExxonMobil",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 0.95,
+        "source_label": "Net income (loss) attributable to ExxonMobil",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 448980.0,
+        "table_id": 84,
+        "row_label": "Total assets",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 0.95,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 332238.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 28844.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 448980.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "PG": {
+    "rule": {
+      "total_revenue": 84284.0,
+      "net_income": 16065.0,
+      "total_assets": 125231.0
+    },
+    "chunks_count": 88,
+    "llm": {
+      "total_revenue": {
+        "value": 84284.0,
+        "table_id": 30,
+        "row_label": "NET SALES",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "NET SALES",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 16065.0,
+        "table_id": 30,
+        "row_label": "NET EARNINGS",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "NET EARNINGS",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 125231.0,
+        "table_id": 32,
+        "row_label": "TOTAL ASSETS",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "TOTAL ASSETS",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 84284.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 16065.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 125231.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "NVDA": {
+    "rule": {
+      "total_revenue": 215938.0,
+      "net_income": 120067.0,
+      "total_assets": 206803.0
+    },
+    "chunks_count": 64,
+    "llm": {
+      "total_revenue": {
+        "value": 215938.0,
+        "table_id": 55,
+        "row_label": "Total revenue",
+        "column_label": "Jan 25, 2026",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total revenue",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 120067.0,
+        "table_id": 21,
+        "row_label": "Net income",
+        "column_label": "Jan 25, 2026",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 206803.0,
+        "table_id": 22,
+        "row_label": "Total assets",
+        "column_label": "Jan 25, 2026",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 215938.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 120067.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 206803.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  },
+  "META": {
+    "rule": {
+      "total_revenue": 200966.0,
+      "net_income": 60458.0,
+      "total_assets": 366021.0
+    },
+    "chunks_count": 73,
+    "llm": {
+      "total_revenue": {
+        "value": 200966.0,
+        "table_id": 26,
+        "row_label": "Revenue",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Revenue",
+        "used_llm": true
+      },
+      "net_income": {
+        "value": 60458.0,
+        "table_id": 26,
+        "row_label": "Net income",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Net income",
+        "used_llm": true
+      },
+      "total_assets": {
+        "value": 366021.0,
+        "table_id": 25,
+        "row_label": "Total assets",
+        "column_label": "2025",
+        "unit": "millions USD",
+        "confidence": 1.0,
+        "source_label": "Total assets",
+        "used_llm": true
+      }
+    },
+    "decisions": {
+      "total_revenue": {
+        "value": 200966.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "net_income": {
+        "value": 60458.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      },
+      "total_assets": {
+        "value": 366021.0,
+        "source": "llm_table",
+        "reason": "high_confidence",
+        "evidence_backed": true
+      }
+    }
+  }
+}
