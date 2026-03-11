@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 2 - V2 Rule Refinement</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body><main class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Slide 2 · V2 Error-Driven Rule Refinement</h1>
+  <section class="card">
+    <h2>Algorithm Upgrades</h2>
+    <ul>
+      <li>Anchored regex patterns (<code>^...$</code>) to avoid partial/sub-line matches.</li>
+      <li>Industry-specific synonyms (e.g., bank and energy style labels).</li>
+      <li>Symbol/per-share filtering to avoid noisy small values.</li>
+      <li>Priority ordering of patterns (specific first, generic later).</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2>Key Result</h2>
+    <p><strong>Exact Accuracy:</strong> 90.0% (27/30) · <strong>MAPE:</strong> 3.48%</p>
+    <p>Improved substantially, but still struggled where semantic table context (units/column meaning) was needed.</p>
+  </section>
+  <section class="card">
+    <h2>Takeaway</h2>
+    <p>Rule quality can be pushed far with careful error analysis, but maintenance cost grows quickly.</p>
+  </section>
+</main></body></html>

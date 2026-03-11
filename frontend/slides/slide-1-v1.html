@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 1 - V1 Baseline</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body><main class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Slide 1 · V1 Baseline Rule Extractor</h1>
+  <section class="card">
+    <h2>Algorithm</h2>
+    <ul>
+      <li>Parse 10-K HTML tables with BeautifulSoup.</li>
+      <li>Regex keyword matching on row labels.</li>
+      <li>Pick first numeric cell as extracted value.</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2>Key Result</h2>
+    <p><strong>Exact Accuracy:</strong> 73.3% (22/30) · <strong>MAPE:</strong> 7.78%</p>
+    <p>Main failure mode: revenue labels varied by company/industry, causing wrong subtotal picks or misses.</p>
+  </section>
+  <section class="card">
+    <h2>Takeaway</h2>
+    <p>Simple rules work for stable templates, but brittle under label drift and table-format variation.</p>
+  </section>
+</main></body></html>

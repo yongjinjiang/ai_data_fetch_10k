@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10-K AI Extraction Optimization Project</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>10-K Financial Data Extraction: AI-Assisted Optimization Journey</h1>
+    <p class="muted">Interview project focus: show how extraction quality improves step-by-step using better rules, hybrid strategies, and table-centric LLM reasoning.</p>
+
+    <section class="card">
+      <h2>Project Goal</h2>
+      <p>
+        Extract three fields from SEC 10-K filings for 10 companies:
+        <code>total_revenue</code>, <code>net_income</code>, <code>total_assets</code>.
+        Then evaluate accuracy against manually curated ground truth and iteratively improve.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Why this project matters</h2>
+      <ul>
+        <li>Demonstrates practical AI engineering (not just one-shot prompting).</li>
+        <li>Shows robust pipeline design: data ingestion → extraction → evaluation → error analysis → iteration.</li>
+        <li>Highlights tradeoffs between deterministic rules and LLM flexibility.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Current Result Snapshot</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>V1 (baseline rules)</h3>
+          <div class="metric warn">73.3% exact</div>
+          <div class="muted">MAPE: 7.78%</div>
+        </div>
+        <div class="card">
+          <h3>V2 (improved rules)</h3>
+          <div class="metric">90.0% exact</div>
+          <div class="muted">MAPE: 3.48%</div>
+        </div>
+        <div class="card">
+          <h3>Hybrid (row-candidate + LLM)</h3>
+          <div class="metric warn">73.3% exact</div>
+          <div class="muted">MAPE: 4.65%</div>
+        </div>
+        <div class="card">
+          <h3>V3 (table-centric + soft rules)</h3>
+          <div class="metric good">100.0% exact</div>
+          <div class="muted">MAPE: 0.0%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How to run each solution</h2>
+      <pre><code># Setup
+./venv/bin/pip install -r requirements.txt
+
+# Baseline
+./venv/bin/python main.py --skip-download --version v1
+
+# Improved rules
+./venv/bin/python main.py --skip-download --version v2
+
+# Existing hybrid (rule + row-candidate LLM)
+./venv/bin/python main.py --skip-download --version hybrid
+
+# New table-centric solution
+./venv/bin/python main.py --skip-download --version v3</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>Slide Deck</h2>
+      <p>Use these slides to present algorithm evolution and results in interview:</p>
+      <div class="nav">
+        <a class="pill" href="./slides/slide-1-v1.html">Slide 1 · V1 Baseline</a>
+        <a class="pill" href="./slides/slide-2-v2.html">Slide 2 · V2 Rule Refinement</a>
+        <a class="pill" href="./slides/slide-3-hybrid.html">Slide 3 · Hybrid Attempt</a>
+        <a class="pill" href="./slides/slide-4-v3.html">Slide 4 · Table-Centric V3</a>
+      </div>
+    </section>
+
+    <p class="footer">Tip: serve locally via <code>python -m http.server 8000</code>, then open <code>http://localhost:8000/frontend/</code>.</p>
+  </main>
+</body>
+</html>

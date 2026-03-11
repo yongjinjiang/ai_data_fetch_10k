@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 4 - V3 Table-Centric</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body><main class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Slide 4 · V3 Table-Centric LLM + Soft Rules</h1>
+  <section class="card">
+    <h2>Algorithm (New)</h2>
+    <ul>
+      <li>Chunk by full <strong>table</strong> (title/context, headers, rows), not by isolated rows.</li>
+      <li>Prompt includes <strong>soft rules</strong>: field synonyms, preferred table type, column/year semantics, unit handling.</li>
+      <li>LLM returns structured evidence: value, table_id, row_label, column_label, unit, confidence.</li>
+      <li>Arbitration layer keeps sanity checks and fallback behavior.</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2>Key Result</h2>
+    <p><strong class="good">Exact Accuracy: 100.0% (30/30)</strong> · <strong class="good">MAPE: 0.0%</strong></p>
+    <p>Major gain came from exposing structural context (headers + table role) and codifying domain heuristics as soft rules.</p>
+  </section>
+  <section class="card">
+    <h2>Interview Storyline</h2>
+    <ol>
+      <li>Start from deterministic baseline.</li>
+      <li>Use error analysis to improve targeted rules.</li>
+      <li>Test hybrid strategy and identify context bottleneck.</li>
+      <li>Redesign around table semantics + soft constraints.</li>
+      <li>Validate with reproducible metrics.</li>
+    </ol>
+  </section>
+</main></body></html>
