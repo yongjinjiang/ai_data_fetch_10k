@@ -1,6 +1,6 @@
 # 10-K Financial Data Extraction Optimization
 
-An interview-focused mini project that builds and iteratively improves a financial data extraction pipeline over SEC 10-K filings.
+A production-inspired, end-to-end project that builds and iteratively improves a financial data extraction pipeline over SEC 10-K filings.
 
 ## Objective
 
@@ -90,4 +90,4 @@ python -m http.server 8000
 - `table_chunker.py`, `table_value_reader.py`, `llm_locator_table.py`
 - `evaluate.py` — metrics/report generation
 - `ground_truth.json` — validated labels
-- `frontend/` — interview presentation pages
+- `frontend/` — project presentation pages
