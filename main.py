@@ -1,6 +1,6 @@
 """
 Main orchestrator for 10K Report Data Extraction & Evaluation.
-Usage: python main.py [--skip-download] [--version v1|v2|hybrid|v3]
+Usage: python main.py [--skip-download] [--version v1|v2|hybrid|v3|v4]
 """
 
 import argparse
@@ -13,6 +13,7 @@ from extractor import extract_all
 from extractor_v2 import extract_all_v2
 from extractor_hybrid import extract_all_hybrid
 from extractor_v3 import extract_all_v3
+from extractor_v4 import extract_all_v4
 from evaluate import load_ground_truth, evaluate, print_report
 
 
@@ -21,7 +22,7 @@ def main():
     parser.add_argument("--skip-download", action="store_true",
                         help="Skip downloading filings (use cached files)")
     parser.add_argument("--version", default="v1",
-                        help="Version label for this run (v1|v2|hybrid|v3, default: v1)")
+                        help="Version label for this run (v1|v2|hybrid|v3|v4, default: v1)")
     args = parser.parse_args()
 
     # Step 1: Download
@@ -44,6 +45,8 @@ def main():
         extracted, hybrid_debug = extract_all_hybrid()
     elif args.version == "v3":
         extracted, hybrid_debug = extract_all_v3()
+    elif args.version == "v4":
+        extracted, hybrid_debug = extract_all_v4()
     else:
         extracted = extract_all()
 
@@ -54,7 +57,7 @@ def main():
         json.dump(extracted, f, indent=2)
     print(f"\nExtracted data saved to {ext_path}")
 
-    if args.version in ("hybrid", "v3") and hybrid_debug is not None:
+    if args.version in ("hybrid", "v3", "v4") and hybrid_debug is not None:
         debug_path = os.path.join(RESULTS_DIR, f"extracted_{args.version}_debug.json")
         with open(debug_path, "w") as f:
             json.dump(hybrid_debug, f, indent=2)
