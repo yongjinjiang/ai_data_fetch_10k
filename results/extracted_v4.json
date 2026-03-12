@@ -12,10 +12,10 @@
     "net_cash_from_operating_activities": 136162.0
   },
   "AMZN": {
-    "total_revenue": 637959.0,
-    "net_income": 59248.0,
-    "total_assets": 624894.0,
-    "net_cash_from_operating_activities": 115877.0
+    "total_revenue": 716924.0,
+    "net_income": 77670.0,
+    "total_assets": 818042.0,
+    "net_cash_from_operating_activities": 139514.0
   },
   "TSLA": {
     "total_revenue": 94827.0,
@@ -33,7 +33,7 @@
     "total_revenue": 182447.0,
     "net_income": 57048.0,
     "total_assets": 4424900.0,
-    "net_cash_from_operating_activities": 44468.0
+    "net_cash_from_operating_activities": -147782.0
   },
   "XOM": {
     "total_revenue": 323905.0,
