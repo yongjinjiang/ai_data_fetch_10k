@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 5 - V4 Idea</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body><main class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Slide 5 · V4 Design Thought (Human-like Table Reading)</h1>
+
+  <section class="card">
+    <h2>Core Thought (CN)</h2>
+    <p>
+      “我想更好的方法可能是，让LLM针对每个表格的行和列名，进行智能判断，它是不是我们需要的field，
+      然后返回可信度最高的行列指标，直接由python去读结果……ai只需要专注于行和列（行列可能交换，
+      还可能是重排成长表格的非透视结构）两个名字，自然语言是它最擅长的。”
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Architecture Shift</h2>
+    <ul>
+      <li><strong>LLM = semantic locator</strong> (table_id, row_label, column_label, confidence)</li>
+      <li><strong>Python = deterministic reader</strong> (cell parsing, sign/unit normalization)</li>
+      <li>Reduce hallucination risk by removing direct LLM numeric output.</li>
+      <li>Better fit for transposed/reordered/non-pivot tables.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Commit / Trial Anchor</h2>
+    <p><code>26d2180</code> · Add v4 semantic locator + deterministic table value reader</p>
+  </section>
+
+  <div class="nav">
+    <a class="pill" href="./slide-4-v3.html">← Prev</a>
+    <a class="pill" href="../index.html">Home</a>
+    <a class="pill" href="./slide-6-v41.html">Next →</a>
+  </div>
+</main></body></html>

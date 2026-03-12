@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 8 - V4.3</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body><main class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Slide 8 · V4.3 Targeted Hard-case Fix (AMZN + JPM)</h1>
+
+  <section class="card">
+    <h2>Observed Hard Cases</h2>
+    <ul>
+      <li>AMZN: selected prior/lower rows for multiple fields.</li>
+      <li>JPM: operating cash flow sign/magnitude mismatch in bank-style statements.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Patch Strategy</h2>
+    <ul>
+      <li>Add inline XBRL fallback helper for targeted fields.</li>
+      <li>Normalize XBRL scale/sign into millions USD.</li>
+      <li>Use fallback only when current value is missing or clearly weaker.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Commit / Trial Anchor</h2>
+    <p><code>04274f4</code> · v4.3 targeted AMZN/JPM hard-case fixes with inline XBRL fallback</p>
+  </section>
+
+  <div class="nav">
+    <a class="pill" href="./slide-7-v42.html">← Prev</a>
+    <a class="pill" href="../index.html">Home</a>
+    <a class="pill" href="./slide-9-v44.html">Next →</a>
+  </div>
+</main></body></html>

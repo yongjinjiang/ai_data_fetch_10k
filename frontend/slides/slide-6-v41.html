@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 6 - V4.1</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body><main class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Slide 6 · V4.1 Reader Alignment Improvements</h1>
+
+  <section class="card">
+    <h2>What was wrong in first v4?</h2>
+    <ul>
+      <li>Year column mismatch (header vs numeric cell offsets).</li>
+      <li>Picked symbolic cells (<code>$</code>, blanks) before true numeric values.</li>
+      <li>Row-label matching too brittle for split header patterns.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Improvements Added</h2>
+    <ul>
+      <li>Latest fiscal-year column inference from headers/top rows.</li>
+      <li>Neighbor numeric recovery around target column.</li>
+      <li>Stronger semantic row matching.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Commit / Trial Anchor</h2>
+    <p><code>43feb72</code> · Improve v4 deterministic reader for year/column alignment</p>
+  </section>
+
+  <div class="nav">
+    <a class="pill" href="./slide-5-v4-idea.html">← Prev</a>
+    <a class="pill" href="../index.html">Home</a>
+    <a class="pill" href="./slide-7-v42.html">Next →</a>
+  </div>
+</main></body></html>
