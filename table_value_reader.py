@@ -7,6 +7,7 @@ read the numeric cell in Python (no LLM numeric output).
 from __future__ import annotations
 
 import re
+from difflib import SequenceMatcher
 from typing import Any
 
 
@@ -14,21 +15,34 @@ def _norm(s: str | None) -> str:
     if not s:
         return ""
     s = s.lower().strip()
+    s = re.sub(r"[^a-z0-9\s]", " ", s)
     s = re.sub(r"\s+", " ", s)
     return s
 
 
+def _canonical_tokens(s: str | None) -> set[str]:
+    txt = _norm(s)
+    if not txt:
+        return set()
+    stop = {
+        "the", "and", "of", "to", "in", "for", "by", "from", "provided", "used",
+        "activities", "activity", "statement", "statements", "consolidated", "total",
+    }
+    return {t for t in txt.split() if t and t not in stop}
+
+
 def _sim(a: str, b: str) -> float:
-    """Cheap token-overlap similarity in [0,1]."""
+    """Hybrid similarity in [0,1]: token overlap + sequence similarity."""
     a_n, b_n = _norm(a), _norm(b)
     if not a_n or not b_n:
         return 0.0
     if a_n == b_n:
         return 1.0
-    ta, tb = set(a_n.split()), set(b_n.split())
-    inter = len(ta & tb)
-    union = len(ta | tb)
-    return inter / union if union else 0.0
+
+    ta, tb = _canonical_tokens(a), _canonical_tokens(b)
+    j = (len(ta & tb) / len(ta | tb)) if (ta and tb and (ta | tb)) else 0.0
+    seq = SequenceMatcher(None, a_n, b_n).ratio()
+    return 0.65 * j + 0.35 * seq
 
 
 def parse_number(text: str) -> float | None:
@@ -54,8 +68,29 @@ def parse_number(text: str) -> float | None:
     return -v if neg else v
 
 
-def _best_col_idx(header_rows: list[list[str]], column_label: str | None, row: list[str]) -> int | None:
-    # Prefer header match if column_label provided
+def _infer_latest_year_col_idx(header_rows: list[list[str]], rows: list[list[str]]) -> int | None:
+    year_re = re.compile(r"^(19|20)\d{2}$")
+    best_year = -1
+    best_idx = None
+
+    for r in list(header_rows) + rows[:3]:
+        for i, c in enumerate(r):
+            t = _norm(c)
+            if year_re.match(t):
+                y = int(t)
+                if y > best_year:
+                    best_year = y
+                    best_idx = i
+    return best_idx
+
+
+def _best_col_idx(
+    header_rows: list[list[str]],
+    rows: list[list[str]],
+    column_label: str | None,
+    row: list[str],
+) -> int | None:
+    # Prefer explicit column label match
     if column_label and header_rows:
         best_idx, best_score = None, 0.0
         for hr in header_rows:
@@ -66,11 +101,28 @@ def _best_col_idx(header_rows: list[list[str]], column_label: str | None, row: l
         if best_idx is not None and best_score >= 0.5:
             return best_idx
 
+    # If no label or weak label, infer latest fiscal year column from header/top rows
+    yr_idx = _infer_latest_year_col_idx(header_rows, rows)
+    if yr_idx is not None:
+        return yr_idx
+
     # Fallback: first numeric in row after label cell
     for i, c in enumerate(row[1:], start=1):
         if parse_number(c) is not None:
             return i
     return None
+
+
+def _resolve_numeric_in_row_near_col(row: list[str], col_idx: int) -> tuple[float | None, int | None]:
+    # Try exact col first, then search right/left neighbors for numeric cell
+    probe_order = [0, 1, -1, 2, -2, 3, -3]
+    for d in probe_order:
+        j = col_idx + d
+        if 0 <= j < len(row):
+            v = parse_number(row[j])
+            if v is not None:
+                return v, j
+    return None, None
 
 
 def _best_row(rows: list[list[str]], row_label: str | None) -> tuple[int | None, list[str] | None]:
@@ -82,14 +134,14 @@ def _best_row(rows: list[list[str]], row_label: str | None) -> tuple[int | None,
         for i, r in enumerate(rows):
             if not r:
                 continue
-            # first-cell label priority
-            score1 = _sim(r[0], row_label)
-            # fallback: any cell contains label-like text
-            score2 = max((_sim(c, row_label) for c in r), default=0.0)
-            score = max(score1, score2 * 0.85)
+            score_first = _sim(r[0], row_label)
+            score_any = max((_sim(c, row_label) for c in r), default=0.0)
+            has_num = any(parse_number(c) is not None for c in r[1:])
+            # Heavily favor first-cell semantic match; rows with numbers are preferred.
+            score = 0.75 * score_first + 0.25 * score_any + (0.05 if has_num else 0.0)
             if score > best_score:
                 best_i, best_score = i, score
-        if best_i is not None and best_score >= 0.45:
+        if best_i is not None and best_score >= 0.40:
             return best_i, rows[best_i]
 
     # Fallback: pick first row that has a numeric cell after first column
@@ -126,7 +178,7 @@ def read_value_from_chunks(
     if row is None:
         return None, {"reason": "row_not_found", "table_id": table_id, "row_label": row_label}
 
-    col_idx = _best_col_idx(header_rows, column_label, row)
+    col_idx = _best_col_idx(header_rows, rows, column_label, row)
     if col_idx is None or col_idx >= len(row):
         return None, {
             "reason": "column_not_found",
@@ -135,21 +187,21 @@ def read_value_from_chunks(
             "column_label": column_label,
         }
 
-    v = parse_number(row[col_idx])
-    if v is None:
+    v, resolved_col = _resolve_numeric_in_row_near_col(row, col_idx)
+    if v is None or resolved_col is None:
         return None, {
             "reason": "cell_not_numeric",
             "table_id": table_id,
             "row_idx": row_idx,
             "col_idx": col_idx,
-            "cell": row[col_idx],
+            "cell": row[col_idx] if 0 <= col_idx < len(row) else None,
         }
 
     return v, {
         "table_id": table_id,
         "row_idx": row_idx,
-        "col_idx": col_idx,
+        "col_idx": resolved_col,
         "row_label": row_label,
         "column_label": column_label,
-        "cell": row[col_idx],
+        "cell": row[resolved_col],
     }
