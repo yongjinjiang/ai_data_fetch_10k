@@ -18,7 +18,7 @@ from config import COMPANIES, DATA_DIR
 from extractor_v2 import extract_filing_v2
 from llm_locator_table import locate_fields_with_llm_table
 from table_chunker import extract_tables_for_ticker
-from table_value_reader import read_value_from_chunks
+from table_value_reader import read_value_from_chunks, read_value_across_chunks
 from validator import decide_value, is_sane_value
 
 FIELDS = ["total_revenue", "net_income", "total_assets", "net_cash_from_operating_activities"]
@@ -54,6 +54,34 @@ def extract_filing_v4(ticker: str) -> tuple[dict[str, float | None], dict[str, A
             row_label=l.get("row_label"),
             column_label=l.get("column_label"),
         )
+
+        # v4.2 fallback: if direct table read fails, search across all chunks by row label.
+        if val is None and l.get("row_label"):
+            fb_val, fb_dbg = read_value_across_chunks(
+                chunks=chunks,
+                row_label=l.get("row_label"),
+                column_label=l.get("column_label"),
+            )
+            if fb_val is not None:
+                val = fb_val
+                dbg = {"primary": dbg, "fallback": fb_dbg}
+
+        # v4.2 sign-aware fallback for operating cash flow variants (e.g., "provided by/(used in)")
+        if (
+            field == "net_cash_from_operating_activities"
+            and val is not None
+            and val > 0
+            and (l.get("row_label") and "used" in str(l.get("row_label")).lower())
+        ):
+            fb_val2, fb_dbg2 = read_value_across_chunks(
+                chunks=chunks,
+                row_label=l.get("row_label"),
+                column_label=l.get("column_label"),
+            )
+            if fb_val2 is not None and abs(fb_val2) > abs(val):
+                val = fb_val2
+                dbg = {"primary": dbg, "sign_fallback": fb_dbg2}
+
         conf = float(l.get("confidence", 0.0) or 0.0)
         decision = _decide_v4(field, rule_res.get(field), val, conf)
 

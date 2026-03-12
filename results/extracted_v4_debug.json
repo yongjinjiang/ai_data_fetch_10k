@@ -21,7 +21,7 @@
         "row_label": "Net income",
         "column_label": null,
         "confidence": 0.95,
-        "reason": "The row label 'Net income' is a direct match and is typically found near the bottom of the income statement.",
+        "reason": "The row label 'Net income' is a direct match and is typically located near the bottom of the income statement.",
         "used_llm": true
       },
       "total_assets": {
@@ -76,7 +76,7 @@
           "row_label": "Net income",
           "column_label": null,
           "confidence": 0.95,
-          "reason": "The row label 'Net income' is a direct match and is typically found near the bottom of the income statement.",
+          "reason": "The row label 'Net income' is a direct match and is typically located near the bottom of the income statement.",
           "used_llm": true
         }
       },
@@ -156,7 +156,7 @@
         "row_label": "Total revenue",
         "column_label": "Year Ended June 30, 2025",
         "confidence": 0.9,
-        "reason": "The label 'Total revenue' is explicitly mentioned in the Income Statement table.",
+        "reason": "The label 'Total revenue' is explicitly mentioned in the income statement.",
         "used_llm": true
       },
       "net_income": {
@@ -164,7 +164,7 @@
         "row_label": "Net income",
         "column_label": "Year Ended June 30, 2025",
         "confidence": 0.9,
-        "reason": "The label 'Net income' is explicitly mentioned in the Income Statement table.",
+        "reason": "The label 'Net income' is explicitly mentioned in the income statement.",
         "used_llm": true
       },
       "total_assets": {
@@ -172,7 +172,7 @@
         "row_label": "Total assets",
         "column_label": "June 30, 2025",
         "confidence": 0.9,
-        "reason": "The label 'Total assets' is explicitly mentioned in the Balance Sheet table.",
+        "reason": "The label 'Total assets' is explicitly mentioned in the balance sheet.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
@@ -180,7 +180,7 @@
         "row_label": "Net cash provided by operating activities",
         "column_label": "Year Ended June 30, 2025",
         "confidence": 0.8,
-        "reason": "The label is closely related to cash flow from operations in the Cash Flow Statement.",
+        "reason": "The label 'Net cash provided by operating activities' is explicitly mentioned in the cash flow statement.",
         "used_llm": true
       }
     },
@@ -200,7 +200,7 @@
           "row_label": "Total revenue",
           "column_label": "Year Ended June 30, 2025",
           "confidence": 0.9,
-          "reason": "The label 'Total revenue' is explicitly mentioned in the Income Statement table.",
+          "reason": "The label 'Total revenue' is explicitly mentioned in the income statement.",
           "used_llm": true
         }
       },
@@ -219,7 +219,7 @@
           "row_label": "Net income",
           "column_label": "Year Ended June 30, 2025",
           "confidence": 0.9,
-          "reason": "The label 'Net income' is explicitly mentioned in the Income Statement table.",
+          "reason": "The label 'Net income' is explicitly mentioned in the income statement.",
           "used_llm": true
         }
       },
@@ -238,7 +238,7 @@
           "row_label": "Total assets",
           "column_label": "June 30, 2025",
           "confidence": 0.9,
-          "reason": "The label 'Total assets' is explicitly mentioned in the Balance Sheet table.",
+          "reason": "The label 'Total assets' is explicitly mentioned in the balance sheet.",
           "used_llm": true
         }
       },
@@ -257,7 +257,7 @@
           "row_label": "Net cash provided by operating activities",
           "column_label": "Year Ended June 30, 2025",
           "confidence": 0.8,
-          "reason": "The label is closely related to cash flow from operations in the Cash Flow Statement.",
+          "reason": "The label 'Net cash provided by operating activities' is explicitly mentioned in the cash flow statement.",
           "used_llm": true
         }
       }
@@ -299,7 +299,7 @@
         "row_label": "Consolidated",
         "column_label": "Net sales",
         "confidence": 0.9,
-        "reason": "The row label 'Net sales' is a synonym for total revenue and appears in the consolidated section of the income statement.",
+        "reason": "The row label 'Net sales' in the consolidated section of the income statement is a direct synonym for total revenue.",
         "used_llm": true
       },
       "net_income": {
@@ -307,7 +307,7 @@
         "row_label": "Net income",
         "column_label": null,
         "confidence": 0.9,
-        "reason": "The row label 'Net income' is a direct match and is located near the bottom of the income statement.",
+        "reason": "The row label 'Net income' is a direct match for the net income field.",
         "used_llm": true
       },
       "total_assets": {
@@ -315,7 +315,7 @@
         "row_label": "Total assets",
         "column_label": null,
         "confidence": 0.9,
-        "reason": "The row label 'Total assets' is a direct match and is found in the balance sheet.",
+        "reason": "The row label 'Total assets' is a direct match for the total assets field.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
@@ -323,26 +323,38 @@
         "row_label": "Net cash provided by (used in) operating activities",
         "column_label": null,
         "confidence": 0.9,
-        "reason": "The row label is a direct match and is found in the cash flow statement under operating activities.",
+        "reason": "The row label 'Net cash provided by (used in) operating activities' is a direct match for the net cash from operating activities field.",
         "used_llm": true
       }
     },
     "reader": {
       "total_revenue": {
-        "located_value": null,
+        "located_value": 637959.0,
         "read_debug": {
-          "reason": "cell_not_numeric",
-          "table_id": 69,
-          "row_idx": 14,
-          "col_idx": 5,
-          "cell": ""
+          "primary": {
+            "reason": "cell_not_numeric",
+            "table_id": 69,
+            "row_idx": 14,
+            "col_idx": 0,
+            "cell": "Consolidated"
+          },
+          "fallback": {
+            "reason": "global_fallback",
+            "table_id": 24,
+            "row_idx": 3,
+            "col_idx": 2,
+            "row_label": "Consolidated",
+            "column_label": "Net sales",
+            "row_score": 1.0,
+            "cell": "637,959"
+          }
         },
         "locator": {
           "table_id": 69,
           "row_label": "Consolidated",
           "column_label": "Net sales",
           "confidence": 0.9,
-          "reason": "The row label 'Net sales' is a synonym for total revenue and appears in the consolidated section of the income statement.",
+          "reason": "The row label 'Net sales' in the consolidated section of the income statement is a direct synonym for total revenue.",
           "used_llm": true
         }
       },
@@ -361,7 +373,7 @@
           "row_label": "Net income",
           "column_label": null,
           "confidence": 0.9,
-          "reason": "The row label 'Net income' is a direct match and is located near the bottom of the income statement.",
+          "reason": "The row label 'Net income' is a direct match for the net income field.",
           "used_llm": true
         }
       },
@@ -380,7 +392,7 @@
           "row_label": "Total assets",
           "column_label": null,
           "confidence": 0.9,
-          "reason": "The row label 'Total assets' is a direct match and is found in the balance sheet.",
+          "reason": "The row label 'Total assets' is a direct match for the total assets field.",
           "used_llm": true
         }
       },
@@ -399,16 +411,16 @@
           "row_label": "Net cash provided by (used in) operating activities",
           "column_label": null,
           "confidence": 0.9,
-          "reason": "The row label is a direct match and is found in the cash flow statement under operating activities.",
+          "reason": "The row label 'Net cash provided by (used in) operating activities' is a direct match for the net cash from operating activities field.",
           "used_llm": true
         }
       }
     },
     "decisions": {
       "total_revenue": {
-        "value": 574785.0,
-        "source": "rule",
-        "reason": "llm_missing"
+        "value": 637959.0,
+        "source": "locator_reader",
+        "reason": "high_confidence"
       },
       "net_income": {
         "value": 59248.0,
@@ -439,17 +451,17 @@
       "total_revenue": {
         "table_id": 22,
         "row_label": "Total revenues",
-        "column_label": "Year Ended December 31,",
+        "column_label": "Year Ended December 31, 2025",
         "confidence": 0.9,
-        "reason": "The label 'Total revenues' is a direct match for the financial field and is located in the income statement.",
+        "reason": "The label 'Total revenues' is a direct match for the financial field, located in the income statement.",
         "used_llm": true
       },
       "net_income": {
         "table_id": 25,
         "row_label": "Net income",
-        "column_label": "Year Ended December 31,",
+        "column_label": "Year Ended December 31, 2025",
         "confidence": 0.9,
-        "reason": "The label 'Net income' is a direct match for the financial field and is located in the income statement.",
+        "reason": "The label 'Net income' is a direct match for the financial field, located in the cash flow statement.",
         "used_llm": true
       },
       "total_assets": {
@@ -457,15 +469,15 @@
         "row_label": "Total assets",
         "column_label": "December 31, 2025",
         "confidence": 0.9,
-        "reason": "The label 'Total assets' is a direct match for the financial field and is located in the balance sheet.",
+        "reason": "The label 'Total assets' is a direct match for the financial field, located in the balance sheet.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
         "table_id": 19,
         "row_label": "Net cash provided by operating activities",
-        "column_label": "Year Ended December 31,",
+        "column_label": "Year Ended December 31, 2025",
         "confidence": 0.9,
-        "reason": "The label 'Net cash provided by operating activities' is a direct match for the financial field and is located in the cash flow statement.",
+        "reason": "The label 'Net cash provided by operating activities' is a direct match for the financial field, located in the cash flow statement.",
         "used_llm": true
       }
     },
@@ -477,15 +489,15 @@
           "row_idx": 6,
           "col_idx": 1,
           "row_label": "Total revenues",
-          "column_label": "Year Ended December 31,",
+          "column_label": "Year Ended December 31, 2025",
           "cell": "94,827"
         },
         "locator": {
           "table_id": 22,
           "row_label": "Total revenues",
-          "column_label": "Year Ended December 31,",
+          "column_label": "Year Ended December 31, 2025",
           "confidence": 0.9,
-          "reason": "The label 'Total revenues' is a direct match for the financial field and is located in the income statement.",
+          "reason": "The label 'Total revenues' is a direct match for the financial field, located in the income statement.",
           "used_llm": true
         }
       },
@@ -496,15 +508,15 @@
           "row_idx": 0,
           "col_idx": 2,
           "row_label": "Net income",
-          "column_label": "Year Ended December 31,",
+          "column_label": "Year Ended December 31, 2025",
           "cell": "3,855"
         },
         "locator": {
           "table_id": 25,
           "row_label": "Net income",
-          "column_label": "Year Ended December 31,",
+          "column_label": "Year Ended December 31, 2025",
           "confidence": 0.9,
-          "reason": "The label 'Net income' is a direct match for the financial field and is located in the income statement.",
+          "reason": "The label 'Net income' is a direct match for the financial field, located in the cash flow statement.",
           "used_llm": true
         }
       },
@@ -523,7 +535,7 @@
           "row_label": "Total assets",
           "column_label": "December 31, 2025",
           "confidence": 0.9,
-          "reason": "The label 'Total assets' is a direct match for the financial field and is located in the balance sheet.",
+          "reason": "The label 'Total assets' is a direct match for the financial field, located in the balance sheet.",
           "used_llm": true
         }
       },
@@ -534,15 +546,15 @@
           "row_idx": 0,
           "col_idx": 3,
           "row_label": "Net cash provided by operating activities",
-          "column_label": "Year Ended December 31,",
+          "column_label": "Year Ended December 31, 2025",
           "cell": "14,747"
         },
         "locator": {
           "table_id": 19,
           "row_label": "Net cash provided by operating activities",
-          "column_label": "Year Ended December 31,",
+          "column_label": "Year Ended December 31, 2025",
           "confidence": 0.9,
-          "reason": "The label 'Net cash provided by operating activities' is a direct match for the financial field and is located in the cash flow statement.",
+          "reason": "The label 'Net cash provided by operating activities' is a direct match for the financial field, located in the cash flow statement.",
           "used_llm": true
         }
       }
@@ -600,7 +612,7 @@
         "row_label": "Total assets",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row label 'Total assets' is a direct match and is found in the balance sheet.",
+        "reason": "The row label 'Total assets' is explicitly stated in the balance sheet, indicating the total assets of the company.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
@@ -608,7 +620,7 @@
         "row_label": "Net cash flows from operating activities",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row label 'Net cash flows from operating activities' is a direct synonym and is found in the cash flow statement.",
+        "reason": "The row label 'Net cash flows from operating activities' directly corresponds to net cash from operating activities in the cash flow statement.",
         "used_llm": true
       }
     },
@@ -666,7 +678,7 @@
           "row_label": "Total assets",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row label 'Total assets' is a direct match and is found in the balance sheet.",
+          "reason": "The row label 'Total assets' is explicitly stated in the balance sheet, indicating the total assets of the company.",
           "used_llm": true
         }
       },
@@ -685,7 +697,7 @@
           "row_label": "Net cash flows from operating activities",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row label 'Net cash flows from operating activities' is a direct synonym and is found in the cash flow statement.",
+          "reason": "The row label 'Net cash flows from operating activities' directly corresponds to net cash from operating activities in the cash flow statement.",
           "used_llm": true
         }
       }
@@ -727,7 +739,7 @@
         "row_label": "Total net revenue",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The label 'Total net revenue' is a direct synonym for 'total revenue' and is found in the income statement section.",
+        "reason": "The label 'Total net revenue' is a direct synonym for 'total revenue' and is found in the income statement.",
         "used_llm": true
       },
       "net_income": {
@@ -735,7 +747,7 @@
         "row_label": "Net income",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The label 'Net income' is a direct synonym for 'net income' and is typically located near the bottom of the income statement.",
+        "reason": "The label 'Net income' is a direct synonym for 'net income' and is typically found near the bottom of the income statement.",
         "used_llm": true
       },
       "total_assets": {
@@ -743,15 +755,15 @@
         "row_label": "Total assets",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The label 'Total assets' is explicitly stated in the balance sheet section.",
+        "reason": "The label 'Total assets' is a direct match and is found in the balance sheet.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
         "table_id": 94,
-        "row_label": "Net cash provided by/ (used in) Operating activities",
+        "row_label": "Net cash provided by/ (used in) operating activities",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The label corresponds directly to 'net cash from operating activities' and is found in the cash flow statement.",
+        "reason": "The label 'Net cash provided by/ (used in) operating activities' is a direct synonym for 'net cash from operating activities' and is found in the cash flow statement.",
         "used_llm": true
       }
     },
@@ -771,7 +783,7 @@
           "row_label": "Total net revenue",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The label 'Total net revenue' is a direct synonym for 'total revenue' and is found in the income statement section.",
+          "reason": "The label 'Total net revenue' is a direct synonym for 'total revenue' and is found in the income statement.",
           "used_llm": true
         }
       },
@@ -790,7 +802,7 @@
           "row_label": "Net income",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The label 'Net income' is a direct synonym for 'net income' and is typically located near the bottom of the income statement.",
+          "reason": "The label 'Net income' is a direct synonym for 'net income' and is typically found near the bottom of the income statement.",
           "used_llm": true
         }
       },
@@ -809,25 +821,37 @@
           "row_label": "Total assets",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The label 'Total assets' is explicitly stated in the balance sheet section.",
+          "reason": "The label 'Total assets' is a direct match and is found in the balance sheet.",
           "used_llm": true
         }
       },
       "net_cash_from_operating_activities": {
-        "located_value": null,
+        "located_value": 44468.0,
         "read_debug": {
-          "reason": "cell_not_numeric",
-          "table_id": 94,
-          "row_idx": 1,
-          "col_idx": 5,
-          "cell": ""
+          "primary": {
+            "reason": "cell_not_numeric",
+            "table_id": 94,
+            "row_idx": 1,
+            "col_idx": 5,
+            "cell": ""
+          },
+          "fallback": {
+            "reason": "global_fallback",
+            "table_id": 650,
+            "row_idx": 5,
+            "col_idx": 2,
+            "row_label": "Net cash provided by/ (used in) operating activities",
+            "column_label": "2025",
+            "row_score": 1.0,
+            "cell": "44,468"
+          }
         },
         "locator": {
           "table_id": 94,
-          "row_label": "Net cash provided by/ (used in) Operating activities",
+          "row_label": "Net cash provided by/ (used in) operating activities",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The label corresponds directly to 'net cash from operating activities' and is found in the cash flow statement.",
+          "reason": "The label 'Net cash provided by/ (used in) operating activities' is a direct synonym for 'net cash from operating activities' and is found in the cash flow statement.",
           "used_llm": true
         }
       }
@@ -849,9 +873,9 @@
         "reason": "high_confidence"
       },
       "net_cash_from_operating_activities": {
-        "value": null,
-        "source": "rule",
-        "reason": "llm_missing"
+        "value": 44468.0,
+        "source": "locator_reader",
+        "reason": "rule_missing_locator_sane"
       }
     }
   },
@@ -869,7 +893,7 @@
         "row_label": "Sales and other operating revenue",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row label directly corresponds to total revenue and is located in the income statement.",
+        "reason": "This row is a direct match for total revenue and is located in the income statement.",
         "used_llm": true
       },
       "net_income": {
@@ -877,7 +901,7 @@
         "row_label": "Net income (loss) attributable to ExxonMobil",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row label is a direct match for net income and is found in the income statement.",
+        "reason": "This row is a direct match for net income and is located in the income statement.",
         "used_llm": true
       },
       "total_assets": {
@@ -885,7 +909,7 @@
         "row_label": "Total Assets",
         "column_label": "December 31, 2025",
         "confidence": 0.9,
-        "reason": "The row label is a direct match for total assets and is found in the balance sheet.",
+        "reason": "This row is a direct match for total assets and is located in the balance sheet.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
@@ -893,7 +917,7 @@
         "row_label": "Net cash provided by operating activities",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row label directly corresponds to net cash from operating activities and is located in the cash flow statement.",
+        "reason": "This row is a direct match for net cash from operating activities and is located in the cash flow statement.",
         "used_llm": true
       }
     },
@@ -913,7 +937,7 @@
           "row_label": "Sales and other operating revenue",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row label directly corresponds to total revenue and is located in the income statement.",
+          "reason": "This row is a direct match for total revenue and is located in the income statement.",
           "used_llm": true
         }
       },
@@ -932,7 +956,7 @@
           "row_label": "Net income (loss) attributable to ExxonMobil",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row label is a direct match for net income and is found in the income statement.",
+          "reason": "This row is a direct match for net income and is located in the income statement.",
           "used_llm": true
         }
       },
@@ -951,7 +975,7 @@
           "row_label": "Total Assets",
           "column_label": "December 31, 2025",
           "confidence": 0.9,
-          "reason": "The row label is a direct match for total assets and is found in the balance sheet.",
+          "reason": "This row is a direct match for total assets and is located in the balance sheet.",
           "used_llm": true
         }
       },
@@ -970,7 +994,7 @@
           "row_label": "Net cash provided by operating activities",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row label directly corresponds to net cash from operating activities and is located in the cash flow statement.",
+          "reason": "This row is a direct match for net cash from operating activities and is located in the cash flow statement.",
           "used_llm": true
         }
       }
@@ -1012,7 +1036,7 @@
         "row_label": "NET SALES",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row label 'NET SALES' is a direct synonym for 'total revenue' and is found in the income statement.",
+        "reason": "NET SALES is a common label for total revenue in the income statement.",
         "used_llm": true
       },
       "net_income": {
@@ -1020,7 +1044,7 @@
         "row_label": "NET EARNINGS",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row label 'NET EARNINGS' is a direct synonym for 'net income' and is typically located near the bottom of the income statement.",
+        "reason": "NET EARNINGS is a standard label for net income in the income statement.",
         "used_llm": true
       },
       "total_assets": {
@@ -1028,15 +1052,15 @@
         "row_label": "TOTAL ASSETS",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row label 'TOTAL ASSETS' is a direct match and is found in the balance sheet.",
+        "reason": "TOTAL ASSETS is the standard label for total assets in the balance sheet.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
         "table_id": 34,
         "row_label": "TOTAL OPERATING ACTIVITIES",
         "column_label": "2025",
-        "confidence": 0.8,
-        "reason": "The row label 'TOTAL OPERATING ACTIVITIES' closely relates to 'net cash from operating activities' and is found in the cash flow statement.",
+        "confidence": 0.9,
+        "reason": "TOTAL OPERATING ACTIVITIES is a common label for net cash from operating activities in the cash flow statement.",
         "used_llm": true
       }
     },
@@ -1056,7 +1080,7 @@
           "row_label": "NET SALES",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row label 'NET SALES' is a direct synonym for 'total revenue' and is found in the income statement.",
+          "reason": "NET SALES is a common label for total revenue in the income statement.",
           "used_llm": true
         }
       },
@@ -1075,7 +1099,7 @@
           "row_label": "NET EARNINGS",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row label 'NET EARNINGS' is a direct synonym for 'net income' and is typically located near the bottom of the income statement.",
+          "reason": "NET EARNINGS is a standard label for net income in the income statement.",
           "used_llm": true
         }
       },
@@ -1094,7 +1118,7 @@
           "row_label": "TOTAL ASSETS",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row label 'TOTAL ASSETS' is a direct match and is found in the balance sheet.",
+          "reason": "TOTAL ASSETS is the standard label for total assets in the balance sheet.",
           "used_llm": true
         }
       },
@@ -1112,8 +1136,8 @@
           "table_id": 34,
           "row_label": "TOTAL OPERATING ACTIVITIES",
           "column_label": "2025",
-          "confidence": 0.8,
-          "reason": "The row label 'TOTAL OPERATING ACTIVITIES' closely relates to 'net cash from operating activities' and is found in the cash flow statement.",
+          "confidence": 0.9,
+          "reason": "TOTAL OPERATING ACTIVITIES is a common label for net cash from operating activities in the cash flow statement.",
           "used_llm": true
         }
       }
@@ -1137,7 +1161,7 @@
       "net_cash_from_operating_activities": {
         "value": 17817.0,
         "source": "locator_reader",
-        "reason": "medium_conf_validated"
+        "reason": "high_confidence"
       }
     }
   },
@@ -1153,33 +1177,33 @@
       "total_revenue": {
         "table_id": 55,
         "row_label": "Total revenue",
-        "column_label": "Year Ended",
+        "column_label": "Jan 25, 2026",
         "confidence": 0.9,
-        "reason": "The label 'Total revenue' is explicitly stated in the context of revenue by end market, which is a common financial reporting format.",
+        "reason": "The label 'Total revenue' is explicitly mentioned in the context of revenue by end market, which is a common financial reporting format.",
         "used_llm": true
       },
       "net_income": {
         "table_id": 21,
         "row_label": "Net income",
-        "column_label": "Year Ended",
+        "column_label": "Jan 25, 2026",
         "confidence": 0.9,
-        "reason": "The label 'Net income' is explicitly stated and typically found near the bottom of the income statement.",
+        "reason": "The label 'Net income' is explicitly stated and is typically found near the bottom of the income statement.",
         "used_llm": true
       },
       "total_assets": {
         "table_id": 22,
         "row_label": "Total assets",
-        "column_label": "Year Ended",
+        "column_label": "Jan 25, 2026",
         "confidence": 0.9,
-        "reason": "The label 'Total assets' is explicitly stated in the balance sheet, which is the standard location for this information.",
+        "reason": "The label 'Total assets' is explicitly mentioned in the balance sheet, which is the standard location for this information.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
         "table_id": 16,
         "row_label": "Net cash provided by operating activities",
-        "column_label": "Year Ended",
+        "column_label": "Jan 25, 2026",
         "confidence": 0.9,
-        "reason": "The label 'Net cash provided by operating activities' is explicitly stated in the cash flow statement, which is the standard location for this information.",
+        "reason": "The label is explicitly stated in the cash flow statement, which is the appropriate section for cash flow information.",
         "used_llm": true
       }
     },
@@ -1191,15 +1215,15 @@
           "row_idx": 7,
           "col_idx": 2,
           "row_label": "Total revenue",
-          "column_label": "Year Ended",
+          "column_label": "Jan 25, 2026",
           "cell": "215,938"
         },
         "locator": {
           "table_id": 55,
           "row_label": "Total revenue",
-          "column_label": "Year Ended",
+          "column_label": "Jan 25, 2026",
           "confidence": 0.9,
-          "reason": "The label 'Total revenue' is explicitly stated in the context of revenue by end market, which is a common financial reporting format.",
+          "reason": "The label 'Total revenue' is explicitly mentioned in the context of revenue by end market, which is a common financial reporting format.",
           "used_llm": true
         }
       },
@@ -1210,15 +1234,15 @@
           "row_idx": 0,
           "col_idx": 2,
           "row_label": "Net income",
-          "column_label": "Year Ended",
+          "column_label": "Jan 25, 2026",
           "cell": "120,067"
         },
         "locator": {
           "table_id": 21,
           "row_label": "Net income",
-          "column_label": "Year Ended",
+          "column_label": "Jan 25, 2026",
           "confidence": 0.9,
-          "reason": "The label 'Net income' is explicitly stated and typically found near the bottom of the income statement.",
+          "reason": "The label 'Net income' is explicitly stated and is typically found near the bottom of the income statement.",
           "used_llm": true
         }
       },
@@ -1229,15 +1253,15 @@
           "row_idx": 13,
           "col_idx": 2,
           "row_label": "Total assets",
-          "column_label": "Year Ended",
+          "column_label": "Jan 25, 2026",
           "cell": "206,803"
         },
         "locator": {
           "table_id": 22,
           "row_label": "Total assets",
-          "column_label": "Year Ended",
+          "column_label": "Jan 25, 2026",
           "confidence": 0.9,
-          "reason": "The label 'Total assets' is explicitly stated in the balance sheet, which is the standard location for this information.",
+          "reason": "The label 'Total assets' is explicitly mentioned in the balance sheet, which is the standard location for this information.",
           "used_llm": true
         }
       },
@@ -1248,15 +1272,15 @@
           "row_idx": 0,
           "col_idx": 2,
           "row_label": "Net cash provided by operating activities",
-          "column_label": "Year Ended",
+          "column_label": "Jan 25, 2026",
           "cell": "102,718"
         },
         "locator": {
           "table_id": 16,
           "row_label": "Net cash provided by operating activities",
-          "column_label": "Year Ended",
+          "column_label": "Jan 25, 2026",
           "confidence": 0.9,
-          "reason": "The label 'Net cash provided by operating activities' is explicitly stated in the cash flow statement, which is the standard location for this information.",
+          "reason": "The label is explicitly stated in the cash flow statement, which is the appropriate section for cash flow information.",
           "used_llm": true
         }
       }
@@ -1298,15 +1322,15 @@
         "row_label": "Revenue",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row labeled 'Revenue' in Table 26 is a direct match for total revenue, which is typically found in the income statement.",
+        "reason": "The row labeled 'Revenue' in Table 26 corresponds to total revenue for the company, which is typically found in the income statement.",
         "used_llm": true
       },
       "net_income": {
-        "table_id": 26,
+        "table_id": 27,
         "row_label": "Net income",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row labeled 'Net income' in Table 26 is a direct match for net income, which is usually found near the bottom of the income statement.",
+        "reason": "The row labeled 'Net income' in Table 27 is a standard line item in the income statement, indicating the company's net earnings.",
         "used_llm": true
       },
       "total_assets": {
@@ -1314,7 +1338,7 @@
         "row_label": "Total assets",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row labeled 'Total assets' in Table 25 is a direct match for total assets, which is typically found in the balance sheet.",
+        "reason": "The row labeled 'Total assets' in Table 25 is found in the balance sheet, representing the total assets of the company.",
         "used_llm": true
       },
       "net_cash_from_operating_activities": {
@@ -1322,7 +1346,7 @@
         "row_label": "Net cash provided by operating activities",
         "column_label": "2025",
         "confidence": 0.9,
-        "reason": "The row labeled 'Net cash provided by operating activities' in Table 19 is a direct match for net cash from operating activities, which is found in the cash flow statement.",
+        "reason": "The row labeled 'Net cash provided by operating activities' in Table 19 corresponds to cash flow from operating activities, which is a key component of the cash flow statement.",
         "used_llm": true
       }
     },
@@ -1342,26 +1366,26 @@
           "row_label": "Revenue",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row labeled 'Revenue' in Table 26 is a direct match for total revenue, which is typically found in the income statement.",
+          "reason": "The row labeled 'Revenue' in Table 26 corresponds to total revenue for the company, which is typically found in the income statement.",
           "used_llm": true
         }
       },
       "net_income": {
         "located_value": 60458.0,
         "read_debug": {
-          "table_id": 26,
-          "row_idx": 11,
+          "table_id": 27,
+          "row_idx": 0,
           "col_idx": 2,
           "row_label": "Net income",
           "column_label": "2025",
           "cell": "60,458"
         },
         "locator": {
-          "table_id": 26,
+          "table_id": 27,
           "row_label": "Net income",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row labeled 'Net income' in Table 26 is a direct match for net income, which is usually found near the bottom of the income statement.",
+          "reason": "The row labeled 'Net income' in Table 27 is a standard line item in the income statement, indicating the company's net earnings.",
           "used_llm": true
         }
       },
@@ -1380,7 +1404,7 @@
           "row_label": "Total assets",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row labeled 'Total assets' in Table 25 is a direct match for total assets, which is typically found in the balance sheet.",
+          "reason": "The row labeled 'Total assets' in Table 25 is found in the balance sheet, representing the total assets of the company.",
           "used_llm": true
         }
       },
@@ -1399,7 +1423,7 @@
           "row_label": "Net cash provided by operating activities",
           "column_label": "2025",
           "confidence": 0.9,
-          "reason": "The row labeled 'Net cash provided by operating activities' in Table 19 is a direct match for net cash from operating activities, which is found in the cash flow statement.",
+          "reason": "The row labeled 'Net cash provided by operating activities' in Table 19 corresponds to cash flow from operating activities, which is a key component of the cash flow statement.",
           "used_llm": true
         }
       }

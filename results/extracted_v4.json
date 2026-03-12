@@ -12,7 +12,7 @@
     "net_cash_from_operating_activities": 136162.0
   },
   "AMZN": {
-    "total_revenue": 574785.0,
+    "total_revenue": 637959.0,
     "net_income": 59248.0,
     "total_assets": 624894.0,
     "net_cash_from_operating_activities": 115877.0
@@ -33,7 +33,7 @@
     "total_revenue": 182447.0,
     "net_income": 57048.0,
     "total_assets": 4424900.0,
-    "net_cash_from_operating_activities": null
+    "net_cash_from_operating_activities": 44468.0
   },
   "XOM": {
     "total_revenue": 323905.0,

@@ -44,7 +44,7 @@ FIELD_RULES: dict[str, dict[str, Any]] = {
 }
 
 FIELDS = list(FIELD_RULES.keys())
-_MAX_CHUNKS = 24
+_MAX_CHUNKS = 40
 _MAX_CHUNK_CHARS = 1400
 
 
@@ -214,4 +214,43 @@ def locate_fields_with_llm_table(ticker: str, chunks: list[dict[str, Any]]) -> d
             "reason": obj.get("reason") or None,
             "used_llm": True,
         }
+
+    for f in FIELDS:
+        if out.get(f, {}).get("table_id") is None:
+            out[f] = _heuristic_locate_field(f, chunks)
+
     return out
+
+
+def _heuristic_locate_field(field: str, chunks: list[dict[str, Any]]) -> dict[str, Any]:
+    """Fallback when LLM returns no locator for a field."""
+    meta = FIELD_RULES.get(field, {})
+    syns = [s.lower() for s in meta.get("synonyms", [])]
+
+    best = None
+    best_score = -1
+    for ch in chunks:
+        txt = (ch.get("title", "") + "\n" + ch.get("serialized", "")).lower()
+        score = sum(1 for s in syns if s in txt)
+        if score > best_score:
+            best_score = score
+            best = ch
+
+    if not best or best_score <= 0:
+        return {
+            "table_id": None,
+            "row_label": None,
+            "column_label": None,
+            "confidence": 0.0,
+            "reason": None,
+            "used_llm": False,
+        }
+
+    return {
+        "table_id": best.get("table_id"),
+        "row_label": meta.get("synonyms", [None])[0],
+        "column_label": None,
+        "confidence": 0.55,
+        "reason": "heuristic_fallback_locator",
+        "used_llm": False,
+    }

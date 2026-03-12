@@ -7,7 +7,7 @@ MSFT,total_revenue,281724,281724.0,0.0,True,True
 MSFT,net_income,101832,101832.0,0.0,True,True
 MSFT,total_assets,619003,619003.0,0.0,True,True
 MSFT,net_cash_from_operating_activities,136162,136162.0,0.0,True,True
-AMZN,total_revenue,716924,574785.0,19.83,False,False
+AMZN,total_revenue,716924,637959.0,11.01,False,False
 AMZN,net_income,77670,59248.0,23.72,False,False
 AMZN,total_assets,818042,624894.0,23.61,False,False
 AMZN,net_cash_from_operating_activities,139514,115877.0,16.94,False,False
@@ -22,7 +22,7 @@ JNJ,net_cash_from_operating_activities,24530,24530.0,0.0,True,True
 JPM,total_revenue,182447,182447.0,0.0,True,True
 JPM,net_income,57048,57048.0,0.0,True,True
 JPM,total_assets,4424900,4424900.0,0.0,True,True
-JPM,net_cash_from_operating_activities,-147782,,,False,False
+JPM,net_cash_from_operating_activities,-147782,44468.0,130.09,False,False
 XOM,total_revenue,332238,323905.0,2.51,False,True
 XOM,net_income,28844,28844.0,0.0,True,True
 XOM,total_assets,448980,448980.0,0.0,True,True
