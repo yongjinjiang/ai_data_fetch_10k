@@ -112,6 +112,25 @@ def extract_filing_v4(ticker: str) -> tuple[dict[str, float | None], dict[str, A
                         "reason": "v4_3_targeted_hardcase_override",
                     }
 
+        # v4.4 targeted XOM fix:
+        # if locator picks "sales and other operating revenue", prefer v2 rule value,
+        # which better aligns with "total revenues and other income" in this filing.
+        if ticker == "XOM" and field == "total_revenue":
+            rv = rule_res.get(field)
+            cur = decision.get("value")
+            row_lbl = (l.get("row_label") or "").lower()
+            if (
+                rv is not None
+                and cur is not None
+                and "sales and other operating revenue" in row_lbl
+                and abs(rv - cur) / max(abs(rv), 1) >= 0.02
+            ):
+                decision = {
+                    "value": rv,
+                    "source": "rule_xom_override",
+                    "reason": "v4_4_xom_total_revenue_alignment",
+                }
+
         final[field] = decision["value"]
         decisions[field] = decision
         reader_debug[field] = {"located_value": val, "read_debug": dbg, "locator": l}

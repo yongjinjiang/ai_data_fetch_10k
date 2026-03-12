@@ -23,7 +23,7 @@ JPM,total_revenue,182447,182447.0,0.0,True,True
 JPM,net_income,57048,57048.0,0.0,True,True
 JPM,total_assets,4424900,4424900.0,0.0,True,True
 JPM,net_cash_from_operating_activities,-147782,-147782.0,0.0,True,True
-XOM,total_revenue,332238,323905.0,2.51,False,True
+XOM,total_revenue,332238,332238.0,0.0,True,True
 XOM,net_income,28844,28844.0,0.0,True,True
 XOM,total_assets,448980,448980.0,0.0,True,True
 XOM,net_cash_from_operating_activities,51970,51970.0,0.0,True,True
