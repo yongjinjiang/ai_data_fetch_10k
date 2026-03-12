@@ -1,9 +1,9 @@
 {
   "version": "hybrid",
-  "total_fields": 30,
-  "exact_matches": 22,
-  "close_matches": 25,
-  "accuracy_pct": 73.3,
-  "close_accuracy_pct": 83.3,
-  "mape": 4.65
+  "total_fields": 40,
+  "exact_matches": 27,
+  "close_matches": 30,
+  "accuracy_pct": 67.5,
+  "close_accuracy_pct": 75.0,
+  "mape": 3.99
 }

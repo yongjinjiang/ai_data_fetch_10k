@@ -22,11 +22,12 @@ COMPANIES = {
     "META":  "0001326801",
 }
 
-# Three numerical fields to extract (in millions USD unless stated)
+# Target numerical fields to extract (in millions USD unless stated)
 TARGET_FIELDS = [
     "total_revenue",
     "net_income",
     "total_assets",
+    "net_cash_from_operating_activities",
 ]
 
 # Directories

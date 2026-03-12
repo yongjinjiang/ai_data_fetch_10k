@@ -14,7 +14,7 @@ from llm_resolver import resolve_fields_with_llm
 from validator import decide_value
 
 
-FIELDS = ["total_revenue", "net_income", "total_assets"]
+FIELDS = ["total_revenue", "net_income", "total_assets", "net_cash_from_operating_activities"]
 
 
 def extract_all_hybrid() -> tuple[dict[str, dict[str, float | None]], dict[str, Any]]:

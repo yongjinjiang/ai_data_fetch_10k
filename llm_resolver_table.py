@@ -72,6 +72,21 @@ FIELD_SOFT_RULES: dict[str, dict[str, Any]] = {
         ),
         "unit_hints": "Millions USD. Typically very large (often > 100,000 for large-cap).",
     },
+    "net_cash_from_operating_activities": {
+        "synonyms": [
+            "net cash provided by operating activities",
+            "net cash from operating activities",
+            "cash provided by operating activities",
+            "cash generated from operations",
+            "net cash provided by operating operations",
+        ],
+        "column_hints": "Use the most-recent fiscal-year column in the cash flow statement.",
+        "table_hints": (
+            "Consolidated statements of cash flows. Avoid investing/financing sections; "
+            "target operating activities only."
+        ),
+        "unit_hints": "Millions USD. Can be negative for some institutions (e.g., banks).",
+    },
 }
 
 FIELDS = list(FIELD_SOFT_RULES.keys())

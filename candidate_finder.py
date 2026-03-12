@@ -36,6 +36,12 @@ FIELD_PATTERNS = {
     "total_assets": [
         r"total\s+assets",
     ],
+    "net_cash_from_operating_activities": [
+        r"net\s+cash\s+provided\s+by\s+operating\s+activities",
+        r"net\s+cash\s+from\s+operating\s+activities",
+        r"cash\s+provided\s+by\s+operating\s+activities",
+        r"cash\s+generated\s+from\s+operations",
+    ],
 }
 
 

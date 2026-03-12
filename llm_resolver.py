@@ -54,6 +54,7 @@ def _build_prompt(ticker: str, candidates: dict[str, list[dict[str, Any]]]) -> s
         "total_revenue": {"value": 0, "confidence": 0.0, "source_label": ""},
         "net_income": {"value": 0, "confidence": 0.0, "source_label": ""},
         "total_assets": {"value": 0, "confidence": 0.0, "source_label": ""},
+        "net_cash_from_operating_activities": {"value": 0, "confidence": 0.0, "source_label": ""},
     }
     return (
         "You are extracting financial statement fields from 10-K candidate rows. "
@@ -73,7 +74,7 @@ def resolve_fields_with_llm(ticker: str, candidates: dict[str, list[dict[str, An
     Resolve fields using LLM if OPENAI_API_KEY exists.
     Returns per-field dict with value/confidence/source_label and resolution metadata.
     """
-    fields = ["total_revenue", "net_income", "total_assets"]
+    fields = ["total_revenue", "net_income", "total_assets", "net_cash_from_operating_activities"]
     empty = {f: {"value": None, "confidence": 0.0, "source_label": None, "used_llm": False} for f in fields}
 
     api_key = os.getenv("OPENAI_API_KEY")

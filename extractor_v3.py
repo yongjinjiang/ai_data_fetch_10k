@@ -22,7 +22,7 @@ from table_chunker import extract_tables_for_ticker
 from llm_resolver_table import resolve_fields_with_llm_table
 from validator import decide_value, is_sane_value
 
-FIELDS = ["total_revenue", "net_income", "total_assets"]
+FIELDS = ["total_revenue", "net_income", "total_assets", "net_cash_from_operating_activities"]
 
 
 # ---------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 {
   "version": "v2",
-  "total_fields": 30,
-  "exact_matches": 27,
-  "close_matches": 27,
-  "accuracy_pct": 90.0,
-  "close_accuracy_pct": 90.0,
-  "mape": 3.48
+  "total_fields": 40,
+  "exact_matches": 32,
+  "close_matches": 32,
+  "accuracy_pct": 80.0,
+  "close_accuracy_pct": 80.0,
+  "mape": 2.98
 }

@@ -11,14 +11,12 @@ def is_sane_value(field: str, value: float | None) -> bool:
     """Basic sanity check for extracted financial values (in millions USD)."""
     if value is None:
         return False
-    if value <= 0:
-        return False
-
     # Broad but useful ranges in millions USD
     ranges = {
         "total_revenue": (100, 5_000_000),
         "net_income": (1, 1_000_000),
         "total_assets": (100, 20_000_000),
+        "net_cash_from_operating_activities": (1, 2_000_000),
     }
     lo, hi = ranges.get(field, (1, 1_000_000_000))
     return lo <= abs(value) <= hi
