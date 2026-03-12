@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 0 - Expansion Plan</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body><main class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Slide 0 · My Next-Step Thought Process</h1>
+
+  <section class="card">
+    <h2>Original Thought (CN)</h2>
+    <p>
+      “我的计划，要进一步提升这个 extraction pipeline 的质量，我的考虑是加进新的目标 fields，
+      让 extraction 的结果降低下来。然后再找原因，考虑新的策略来提高。”
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Why this is a strong strategy</h2>
+    <ul>
+      <li>Don’t optimize for a static benchmark only — increase task difficulty on purpose.</li>
+      <li>Use performance drop as a diagnostic signal to expose hidden failure modes.</li>
+      <li>Apply root-cause analysis, then iterate with targeted fixes.</li>
+      <li>Demonstrates engineering maturity: <strong>stress test → analyze → improve</strong>.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Execution Loop</h2>
+    <ol>
+      <li>Add one challenging field.</li>
+      <li>Re-run all existing extractors (no architecture change at first).</li>
+      <li>Inspect failures by company/statement/table pattern.</li>
+      <li>Introduce focused strategy upgrades and re-evaluate.</li>
+    </ol>
+  </section>
+
+  <div class="nav">
+    <a class="pill" href="../index.html">Home</a>
+    <a class="pill" href="./slide-0-new-field.html">Next →</a>
+  </div>
+</main></body></html>

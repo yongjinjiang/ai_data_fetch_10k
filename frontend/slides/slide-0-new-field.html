@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide 0.1 - New Field & Ground Truth</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body><main class="container">
+  <a href="../index.html">← Back to Home</a>
+  <h1>Slide 0.1 · Why This New Field + How GT Was Built</h1>
+
+  <section class="card">
+    <h2>Why choose <code>net_cash_from_operating_activities</code>?</h2>
+    <ul>
+      <li>Expands from income/balance statements into cash flow statement logic.</li>
+      <li>Harder semantics: operating vs investing/financing, sign handling, period alignment.</li>
+      <li>More realistic for production extraction robustness than only revenue/assets.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Ground Truth Workflow (Fast + Reliable)</h2>
+    <ol>
+      <li>Use the strongest model (<strong>GPT-5.4</strong>) to generate initial number suggestions.</li>
+      <li>Manually validate each company against cached 10-K HTML tables/tags.</li>
+      <li>Correct mismatches and finalize into <code>ground_truth.json</code>.</li>
+    </ol>
+    <p class="muted">Principle: AI accelerates candidate generation; human validation guarantees final label quality.</p>
+  </section>
+
+  <section class="card">
+    <h2>Interview Message</h2>
+    <p>
+      I intentionally increased problem difficulty with a new field, then used
+      AI-assisted labeling + manual verification to keep data quality high and iteration speed fast.
+    </p>
+  </section>
+
+  <div class="nav">
+    <a class="pill" href="./slide-0-plan.html">← Prev</a>
+    <a class="pill" href="../index.html">Home</a>
+    <a class="pill" href="./slide-1-v1.html">Next →</a>
+  </div>
+</main></body></html>
