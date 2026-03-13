@@ -2,3 +2,4 @@ requests
 beautifulsoup4
 lxml
 pandas
+pydantic>=2.8,<3

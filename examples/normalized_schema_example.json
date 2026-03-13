@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "type": "html",
+    "path": "data/AAPL_10k.htm",
+    "filename": "AAPL_10k.htm",
+    "mime_type": "text/html",
+    "ingested_at": "2026-03-13T22:00:00Z"
+  },
+  "document": {
+    "company": "Apple Inc.",
+    "ticker": "AAPL",
+    "form_type": "10-K",
+    "fiscal_year": 2024,
+    "period_end_date": "2024-09-28",
+    "filing_date": "2024-11-01",
+    "title": "Form 10-K",
+    "language": "en"
+  },
+  "content": {
+    "sections": [
+      {
+        "id": "s0",
+        "title": "financial_tables",
+        "level": 1,
+        "text": "Extracted from table-centric pipeline",
+        "page_start": null,
+        "page_end": null,
+        "char_count": 37
+      }
+    ],
+    "tables": [],
+    "key_values": [
+      {
+        "key": "total_revenue",
+        "value": "391035.0",
+        "row_label": "Total net sales",
+        "value_type": "number",
+        "unit": "millions USD",
+        "context": "2024",
+        "section_id": "s0",
+        "table_id": "table_4",
+        "page": null
+      }
+    ]
+  },
+  "quality": {
+    "is_digital_pdf": true,
+    "text_coverage": 1.0,
+    "parse_warnings": [],
+    "validation_errors": [],
+    "confidence": {
+      "overall": 0.92,
+      "sections": 0.9,
+      "tables": 0.92,
+      "key_values": 0.92
+    }
+  },
+  "provenance": {
+    "parser": {
+      "name": "extractor_v3",
+      "version": "v3"
+    },
+    "resolver_input_ready": true
+  }
+}
