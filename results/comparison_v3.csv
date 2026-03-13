@@ -7,10 +7,10 @@ MSFT,total_revenue,281724,281724.0,0.0,True,True
 MSFT,net_income,101832,101832.0,0.0,True,True
 MSFT,total_assets,619003,619003.0,0.0,True,True
 MSFT,net_cash_from_operating_activities,136162,136162.0,0.0,True,True
-AMZN,total_revenue,716924,716924.0,0.0,True,True
-AMZN,net_income,77670,77670.0,0.0,True,True
-AMZN,total_assets,818042,818042.0,0.0,True,True
-AMZN,net_cash_from_operating_activities,139514,139514.0,0.0,True,True
+AMZN,total_revenue,716924,574785.0,19.83,False,False
+AMZN,net_income,77670,30425.0,60.83,False,False
+AMZN,total_assets,818042,624894.0,23.61,False,False
+AMZN,net_cash_from_operating_activities,139514,84946.0,39.11,False,False
 TSLA,total_revenue,94827,94827.0,0.0,True,True
 TSLA,net_income,3855,3855.0,0.0,True,True
 TSLA,total_assets,137806,137806.0,0.0,True,True
