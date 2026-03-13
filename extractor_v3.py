@@ -21,7 +21,7 @@ from extractor_v2 import extract_filing_v2
 from table_chunker import extract_tables_for_ticker
 from llm_resolver_table import resolve_fields_with_llm_table
 from validator import decide_value, is_sane_value
-from schema_adapter import from_v3_debug
+from input_router import route_to_normalized
 
 FIELDS = ["total_revenue", "net_income", "total_assets", "net_cash_from_operating_activities"]
 
@@ -128,9 +128,9 @@ def extract_filing_v3(ticker: str) -> tuple[dict[str, float | None], dict[str, A
         "decisions": decisions,
     }
 
-    normalized = from_v3_debug(
-        ticker=ticker,
+    normalized = route_to_normalized(
         source_path=filepath,
+        ticker=ticker,
         final_values=final,
         debug=debug,
     )
